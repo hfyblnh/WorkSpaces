@@ -1,5 +1,9 @@
-var name = 'World';
+'use strict';
 
-var s = `Hello, ${name}!`;
+var s = 'Hello';
 
-console.log(s);
+function greet(name) {
+    console.log(s + ',' + name + '!');
+}
+
+module.exports = greet;
