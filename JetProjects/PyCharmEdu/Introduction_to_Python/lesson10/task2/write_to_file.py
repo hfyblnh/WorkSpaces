@@ -1,9 +1,10 @@
 zoo = ['lion', "elephant", 'monkey']
 
 if __name__ == "__main__":
-    f = open("output.txt", add modifier)
+	f = open("output.txt", "a")
 
-    for i in zoo:
-        add the whole zoo to the output.txt
+	for i in zoo:
+		f.write(i)
+		f.write("\n")
 
-    close the file
+	f.close()

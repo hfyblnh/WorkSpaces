@@ -1,6 +1,7 @@
 def sum_two_numbers(a, b):
     return a + b            # return result to the function caller
 
+
 c = sum_two_numbers(3, 12)  # assign result of function execution to variable 'c'
 
 
@@ -9,12 +10,12 @@ def fib(n):
     Return a list containing the Fibonacci series up to n."""
     result = []
     a = 1
-    b = initialize variable b
+    b = 1
     while a < n:
         result.append(a)
         tmp_var = b
-        update variable b
-        update variable a
+        b += a
+        a = tmp_var
     return result
 
 print(fib(10))
