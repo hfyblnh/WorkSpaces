@@ -1,11 +1,5 @@
-# WorkSpace
-
-.metadata
-RemoteSystemsTempFiles
-
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+# WorkSpaces
+eclipse-workspace
+VS2017
+VSCode
+GitHub
