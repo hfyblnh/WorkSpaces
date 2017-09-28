@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StudySettings">
+    <StudyTaskManager>
+      <option name="course">
+        <RemoteCourse>
+          <option name="adaptive" value="true" />
+          <option name="authors">
+            <list />
+          </option>
+          <option name="courseMode" value="Study" />
+          <option name="courseType" value="PyCharm" />
+          <option name="description" value="This is a Stepik Adaptive course.&#10;&#10;Adaptive problem set to learn Python. &#13;&#10;Join the course and you can try out the first prototype of the adaptive engine! &#10;&#10;Initially, the adaptive system may behave somewhat randomly, but the more problems you solve, the smarter it becomes!" />
+          <option name="id" value="568" />
+          <option name="instructors">
+            <list />
+          </option>
+          <option name="language" value="Python" />
+          <option name="lessons">
+            <list>
+              <Lesson>
+                <option name="id" value="28227" />
+                <option name="index" value="1" />
+                <option name="name" value="Adaptive" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <CodeTask>
+                      <option name="index" value="1" />
+                      <option name="name" value="Koch curve" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="100075" />
+                      <option name="taskTexts">
+                        <map>
+                          <entry key="task" value="&lt;p&gt;Koch curve is a simple geometric fractal. &lt;/p&gt;&#10;&#10;&lt;p&gt;This fractal is constructed as follows: we take an interval and&#10;divide it into three equal parts. Instead of the middle part we insert two the&#10;same intervals, set at an angle 60 degrees to each other (see the image,&#10;transition from $n=0$ to $n=1$).&lt;/p&gt;&#10;&#10;&lt;p&gt;This process is repeated at every iteration: each interval is&#10;replaced by the four intervals.&lt;/p&gt;&#10;&#10;&#10;&#10;&#10;&#10;&lt;img src=&quot;https://ucarecdn.com/a24b9bbe-301d-4275-88b0-a4b7c8fef452/&quot; height=&quot;431&quot; width=&quot;443&quot; alt=&quot;&quot;&gt;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&lt;p&gt;&lt;br&gt;Write a program that takes number &lt;b&gt;n&lt;/b&gt; as input − the number of&#10;iterations to generate curve, and outputs the sequence of turn angles when&#10;drawing a corresponding line from the start to the end point, without leaving&#10;the pen.&lt;br&gt;&lt;/p&gt;&#10;&#10;&lt;p&gt;&lt;b&gt;Input format:&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&lt;p&gt;Single line with the integer $n$, $1\le n \le 10$.&lt;/p&gt;&#10;&#10;&lt;p&gt;&lt;b&gt;Output format:&lt;/b&gt;&lt;/p&gt;&#10;&#10;&lt;p&gt;Sequence of turn. Each turn is specified&#10;in a separate line as a word &quot;turn&quot; and the angle of rotation.&#10;The angle of rotation should be in degrees in the interval [-180; 180].&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;b&gt;Addition:&lt;/b&gt;&lt;/p&gt;&#10;&#10;&lt;p&gt;Python includes the turtle library, allowing to draw with the help&#10;of so-called &quot;turtle&quot;.&lt;/p&gt;&#10;&#10;&lt;p&gt;We will need several simple commands: &lt;/p&gt;&#10;&#10;&#10;&#10;&#10;&#10;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;turtle.forward(length)&lt;br&gt;turtle.left(degree)&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;Here is a simple script that draws the Koch curve for the specific &lt;b&gt;n&lt;/b&gt;:&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&#10;&#10;&#10;&#10;&#10;&#10;&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;import turtle&#10;&#10;def koch_turns(n):&#10;    ... # here should be the implementation of the function,            &#10;        # generating the sequence of numbers, setting the line turns.  &#10;&#10;def turtle_koch_curve(n, line_length=10):&#10;    for move in koch_turns(n):&lt;br&gt;        turtle.forward(line_length)&lt;br&gt;        turtle.left(move)&lt;br&gt;    turtle.forward(line_length)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt;Call the function turtle_koch_curve with the argument &lt;b&gt;n&lt;/b&gt; (number of iterations)&lt;b&gt;&lt;/b&gt;, and you will see how the turtle draws the fractal. You can also specify a length of the segment if necessary.&lt;br&gt;&lt;/p&gt;&#10;&#10;&lt;p&gt;If an error occurs, try installing the &lt;b&gt;tk&lt;/b&gt; module.&lt;/p&gt;&#10;&#10;&lt;p&gt;Please note than the function &lt;b&gt;koch_turns&lt;/b&gt; should return a list of integers, for example:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;pre&gt;&lt;code&gt;print(list(koch_turns(1)))  # [60, -120, 60]&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;br&gt;&lt;b&gt;Sample Input:&lt;/b&gt;&lt;br&gt;1&lt;br&gt;&lt;b&gt;Sample Output:&lt;/b&gt;&lt;br&gt;turn 60&lt;br&gt;turn -120&lt;br&gt;turn 60&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Memory limit&lt;/b&gt;: 256 Mb&lt;br&gt;&lt;b&gt;Time limit&lt;/b&gt;: 5s&lt;br&gt;&lt;br&gt;" />
+                        </map>
+                      </option>
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="task.py">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="index" value="0" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="task.py" />
+                                <option name="text" value="# put your python code here" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </CodeTask>
+                  </list>
+                </option>
+              </Lesson>
+            </list>
+          </option>
+          <option name="name" value="Adaptive Python" />
+          <option name="sections">
+            <list>
+              <option value="1785" />
+              <option value="1786" />
+            </list>
+          </option>
+          <option name="updateDate" value="1500426375000" />
+        </RemoteCourse>
+      </option>
+      <option name="toolWindowMode" value="TEXT" />
+      <option name="turnEditingMode" value="false" />
+      <option name="VERSION" value="6" />
+    </StudyTaskManager>
+  </component>
+</project>
