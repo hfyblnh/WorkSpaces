@@ -101,6 +101,42 @@ def log4(text):
 	return decorator
 
 
+# 作业
+def call_log(*args1, **kw1):
+	if len(args1) == 1 and len(kw1) == 0 and callable(args1[0]):  # 以 @log 处理
+		@functools.wraps(args1[0])
+		def wrapper1(*args, **kw):
+			print('call %s():' % args1[0].__name__)
+			return args1[0](*args, **kw)
+
+		return wrapper1
+	else:  # 以 @log(*args, **kwargs) 处理，用args[0]取输入字符串
+		def decorator(func):
+			@functools.wraps(func)
+			def wrapper2(*args, **kw):
+				print('%s begin call' % args1[0])
+				func(*args, **kw)
+				print('%s end call' % args1[0])
+
+			return wrapper2
+
+		return decorator
+
+
+@call_log('Arteezy')
+def ftest1():
+	print("2ez4rtz")
+
+
+@call_log
+def ftest2():
+	print('Life is a river.')
+
+
+print("作业：")
+print(ftest2())
+print(ftest1())
+
 '''
 小结
 在面向对象（OOP）的设计模式中，decorator被称为装饰模式。OOP的装饰模式需要通过继承和组合来实现，
