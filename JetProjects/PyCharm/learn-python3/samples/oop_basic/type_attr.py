@@ -72,7 +72,7 @@ print(hasattr(obj, 'y'))
 setattr(obj, 'y', 21)
 print(hasattr(obj, 'y'))
 print(getattr(obj, 'y'))
-print(getattr(obj, 'z'))
+# print(getattr(obj, 'z'))
 
 '''
 小结
@@ -85,3 +85,25 @@ def readImage(fp):
 	if hasattr(fp, 'read'):
 		return readData(fp)
 	return None
+
+
+# 实例属性和类属性
+# 由于Python是动态语言，根据类创建的实例可以任意绑定属性。
+# 给实例绑定属性的方法是通过实例变量，或者通过self变量：
+
+class Student(object):
+	def __init__(self, name):
+		self.name = name
+
+
+class Student(object):
+	name = 'Student'
+
+
+s = Student()
+print(s.name)
+print(Student.name)
+s.name = 'SumaiL'
+print(s.name)
+del s.name
+print(s.name)
