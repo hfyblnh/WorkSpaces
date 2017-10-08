@@ -22,14 +22,9 @@ def find_sqrt_bin_search(n, error=0.001):
 
 def test_ind_sqrt_bin_search():
     number = 9
-    assert(find_sqrt_bin_search(number) == 3)
+    assert (find_sqrt_bin_search(number) == 3)
     print('Tests passed!')
 
 
 if __name__ == '__main__':
     test_ind_sqrt_bin_search()
-
-
-
-
-

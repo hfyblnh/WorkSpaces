@@ -21,7 +21,7 @@ def find_product_without_division(seq):
 
         prod_f, prod_b = 1, 1
 
-        for next in range(i+1, len(seq)):
+        for next in range(i + 1, len(seq)):
             prod_f *= seq[next]
 
         for before in range(0, i):
@@ -36,7 +36,7 @@ def find_product_without_division(seq):
     return seq
 
 
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

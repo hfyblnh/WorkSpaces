@@ -2,6 +2,6 @@
 
 __author__ = "bt3"
 
-
-test = lambda x: x**2
-print test(3)
+test = lambda x: x ** 2
+print
+test(3)

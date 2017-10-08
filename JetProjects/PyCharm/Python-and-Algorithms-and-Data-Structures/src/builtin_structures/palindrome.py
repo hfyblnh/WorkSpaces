@@ -2,9 +2,8 @@
 
 __author__ = "bt3"
 
-
-
 from collections import defaultdict
+
 
 def is_palindrome(array):
     '''
@@ -29,5 +28,5 @@ def is_palindrome(array):
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

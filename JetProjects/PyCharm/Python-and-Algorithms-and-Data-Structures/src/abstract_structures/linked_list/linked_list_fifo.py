@@ -4,15 +4,14 @@ __author__ = "bt3"
 
 ''' A class for a linked list that has the nodes in a FIFO order (such as a queue)'''
 
-
 from node import Node
 
-class LinkedListFIFO(object):
 
+class LinkedListFIFO(object):
     def __init__(self):
         self.head = None
         self.length = 0
-        self.tail = None # this is different from ll lifo
+        self.tail = None  # this is different from ll lifo
 
     def _printList(self):
         node = self.head
@@ -62,7 +61,7 @@ class LinkedListFIFO(object):
             node, prev, i = self._find(index)
             if i == index and node:
                 self.length -= 1
-                if i == 0 or not prev :
+                if i == 0 or not prev:
                     self.head = node.pointer
                 else:
                     prev.pointer = node.pointer
@@ -85,6 +84,6 @@ if __name__ == '__main__':
     ll._add(15)
     ll._printList()
     print("The list after deleting everything...")
-    for i in range(ll.length-1, -1, -1):
+    for i in range(ll.length - 1, -1, -1):
         ll.deleteNode(i)
     ll._printList()

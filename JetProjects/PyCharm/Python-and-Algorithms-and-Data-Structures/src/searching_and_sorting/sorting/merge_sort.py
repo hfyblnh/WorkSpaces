@@ -11,7 +11,7 @@ def merge_sort(array):
     if len(array) < 2:
         return array
 
-    mid = len(array)//2
+    mid = len(array) // 2
     left = merge_sort(array[:mid])
     right = merge_sort(array[mid:])
 
@@ -26,14 +26,15 @@ def merge_sort(array):
             j += 1
 
     if left[i:]:
-       res.extend(left[i:])
+        res.extend(left[i:])
     if right[j:]:
         res.extend(right[j:])
     return res
 
 
-
 ''' Merge sort for files '''
+
+
 def merge_files(list_files):
     result = []
     final = []
@@ -51,4 +52,5 @@ def merge_files(list_files):
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

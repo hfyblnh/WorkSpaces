@@ -6,6 +6,7 @@ __author__ = "bt3"
 
 from collections import Counter
 
+
 def delete_unique(str1):
     '''
     >>> delete_unique("Trust no one")
@@ -39,11 +40,12 @@ def removing_duplicates_seq(str1):
     result = set()
     for item in seq:
         if item not in result:
-            #yield item
+            # yield item
             result.add(item)
     return result
 
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

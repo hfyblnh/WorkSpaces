@@ -4,7 +4,6 @@ __author__ = "bt3"
 
 
 class Queue(object):
-
     def __init__(self):
         self.in_stack = []
         self.out_stack = []

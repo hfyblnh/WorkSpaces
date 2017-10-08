@@ -2,10 +2,10 @@
 
 __author__ = "bt3"
 
-
 ''' Heapsort using Pythons libraries'''
 
 import heapq
+
 
 def heap_sort1(seq):
     ''' heap sort with Python's heapq '''
@@ -17,14 +17,14 @@ def heap_sort1(seq):
 
 def test_heap_sort1():
     seq = [3, 5, 2, 6, 8, 1, 0, 3, 5, 6, 2]
-    assert(heap_sort1(seq) == sorted(seq))
+    assert (heap_sort1(seq) == sorted(seq))
     print('Tests passed!')
-
 
 
 ''' Heapsort using my Heap class '''
 
 from heap import Heap
+
 
 def heap_sort2(seq):
     heap = Heap(seq)
@@ -38,19 +38,22 @@ def heap_sort2(seq):
 
 def test_heap_sort2():
     seq = [3, 5, 2, 6, 8, 1, 0, 3, 5, 6, 2]
-    print heap_sort2(seq)
+    print
+    heap_sort2(seq)
     print('Tests passed!')
 
 
 ''' A third way of doing heap sort '''
 
+
 def heap_sort3(seq):
-    for start in range((len(seq)-2)//2, -1, -1):
-        siftdown(seq, start, len(seq)-1)
-    for end in range(len(seq)-1, 0, -1):
+    for start in range((len(seq) - 2) // 2, -1, -1):
+        siftdown(seq, start, len(seq) - 1)
+    for end in range(len(seq) - 1, 0, -1):
         seq[end], seq[0] = seq[0], seq[end]
         siftdown(seq, 0, end - 1)
     return seq
+
 
 def siftdown(seq, start, end):
     root = start
@@ -66,16 +69,10 @@ def siftdown(seq, start, end):
             break
 
 
-
 def test_heap_sort3():
     seq = [3, 5, 2, 6, 8, 1, 0, 3, 5, 6, 2]
-    assert(heap_sort3(seq) == sorted(seq))
+    assert (heap_sort3(seq) == sorted(seq))
     print('Tests passed!')
-
-
-
-
-
 
 
 if __name__ == '__main__':

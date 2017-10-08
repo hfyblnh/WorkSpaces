@@ -5,6 +5,7 @@ __author__ = "bt3"
 
 import sys
 
+
 def grep_word_from_files():
     ''' using iterator enumerate to create a grep command '''
     word = sys.argv[1]
@@ -21,7 +22,3 @@ if __name__ == '__main__':
         sys.exit()
     else:
         grep_word_from_files()
-
-
-
-

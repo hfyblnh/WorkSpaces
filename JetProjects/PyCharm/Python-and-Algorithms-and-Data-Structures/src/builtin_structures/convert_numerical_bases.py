@@ -4,6 +4,7 @@ __author__ = "bt3"
 
 ''' convert an integer to a string in any base'''
 
+
 def convert_from_dec_to_any_base(number, base):
     '''
     >>> number, base = 9, 2
@@ -17,9 +18,8 @@ def convert_from_dec_to_any_base(number, base):
         return convertString[number]
 
     else:
-        return convert_from_dec_to_any_base(number//base, base) + \
-                                            convertString[number%base]
-
+        return convert_from_dec_to_any_base(number // base, base) + \
+               convertString[number % base]
 
 
 def convert_from_decimal_to_binary(number, base):
@@ -32,12 +32,11 @@ def convert_from_decimal_to_binary(number, base):
     multiplier, result = 1, 0
 
     while number > 0:
-        result += number%base*multiplier
+        result += number % base * multiplier
         multiplier *= 10
-        number = number//base
+        number = number // base
 
     return result
-
 
 
 def convert_from_decimal_larger_bases(number, base):
@@ -50,15 +49,14 @@ def convert_from_decimal_larger_bases(number, base):
     result = ""
 
     while number > 0:
-        digit = number%base
+        digit = number % base
         result = strings[digit] + result
-        number = number//base
+        number = number // base
 
     return result
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

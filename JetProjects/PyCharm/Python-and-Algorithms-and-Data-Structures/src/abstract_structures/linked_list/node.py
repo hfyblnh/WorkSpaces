@@ -2,6 +2,7 @@
 
 __author__ = "bt3"
 
+
 class Node(object):
     def __init__(self, value=None, pointer=None):
         self.value = value
@@ -20,10 +21,9 @@ class Node(object):
         self.pointer = newpointer
 
 
-
 if __name__ == '__main__':
     L = Node("a", Node("b", Node("c", Node("d"))))
-    assert(L.pointer.pointer.value=='c')
+    assert (L.pointer.pointer.value == 'c')
 
     print(L.getData())
     print(L.getNext().getData())

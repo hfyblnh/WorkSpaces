@@ -46,7 +46,6 @@ class Stack(object):
         else:
             print('Stack is empty.')
 
-
     def __repr__(self):
         return '{}'.format(self.content)
 
@@ -54,12 +53,11 @@ class Stack(object):
 if __name__ == '__main__':
     q = Stack()
 
-    for i in range(15,20):
+    for i in range(15, 20):
         q.push(i)
-    for i in range(10,5,-1):
+    for i in range(10, 5, -1):
         q.push(i)
-
-
 
     for i in range(1, 13):
-        print q.pop(), q.find_min()
+        print
+        q.pop(), q.find_min()

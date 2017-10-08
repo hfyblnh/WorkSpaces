@@ -2,14 +2,15 @@
 
 __author__ = "bt3"
 
-
 import collections
 import string
 import sys
 
+
 def count_unique_word_file():
     if len(sys.argv) < 2:
-        print "Usage: python count_unique_word.py NAMEFILE"
+        print
+        "Usage: python count_unique_word.py NAMEFILE"
 
     words = collections.defaultdict(int)
     strip = string.whitespace + string.punctuation + string.digits + "\"'"

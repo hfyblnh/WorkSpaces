@@ -20,7 +20,7 @@ def find_long_con_inc(seq):
 
     for i, n in enumerate(seq[:-1]):
         aux.append(n)
-        if n > seq[i+1]:
+        if n > seq[i + 1]:
             if len(res) < len(aux):
                 res = aux[:]
             aux = []
@@ -28,7 +28,7 @@ def find_long_con_inc(seq):
     return res
 
 
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

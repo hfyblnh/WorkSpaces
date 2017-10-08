@@ -7,6 +7,7 @@ You have two arrays with N integers in them. Merge those arrays using a
 recursive algorithm so that the integers in the final array are sorted.
 '''
 
+
 def merge_arrays(a1, a2):
     '''
     >>> merge_arrays([5, 4, 3], [6, 2, 9])
@@ -29,7 +30,7 @@ def merge_arrays(a1, a2):
             p1 += 1
         else:
             merge.append(a2[p2])
-            p2 +=1
+            p2 += 1
 
     if a1[p1:]:
         merge.extend(a1[p1:])
@@ -42,5 +43,5 @@ def merge_arrays(a1, a2):
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

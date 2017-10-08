@@ -2,13 +2,13 @@
 
 __author__ = "bt3"
 
-
 ''' A method to sort an array so that all the anagrams are together.
     Since we only want the anagrams to be grouped, we can use a
     dictionary for this task. This algorithm is O(n).
 '''
 
 from collections import defaultdict
+
 
 def sort_anagrams_together(l1):
     '''
@@ -28,7 +28,8 @@ def sort_anagrams_together(l1):
 
     return result
 
+
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

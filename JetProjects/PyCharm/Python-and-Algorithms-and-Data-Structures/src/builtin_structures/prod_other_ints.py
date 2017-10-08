@@ -16,13 +16,15 @@ def get_products_of_all_except_at_index(array):
     new_array = []
     for n in array:
         if n is not 0:
-            item = total/n
+            item = total / n
             new_array.append(item)
         else:
             new_array.append(n)
 
     return new_array
 
+
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

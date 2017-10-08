@@ -10,13 +10,12 @@ __author__ = "bt3"
 '''
 
 
-
-def  update_bit(num, i, v):
+def update_bit(num, i, v):
     mask = ~ (1 << i)
-    return bin( (num & mask) | (v << i) )
+    return bin((num & mask) | (v << i))
 
 
 if __name__ == '__main__':
     num = int('10010000', 2)
-    print update_bit(num, 2, 1)   # '0b10010100'
-
+    print
+    update_bit(num, 2, 1)  # '0b10010100'

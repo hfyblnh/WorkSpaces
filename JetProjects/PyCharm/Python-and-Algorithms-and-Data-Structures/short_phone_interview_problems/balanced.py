@@ -16,7 +16,6 @@ def balance_par_str_with_stack(str1):
     return not stack
 
 
-
 if __name__ == '__main__':
     print(balance_par_str_with_stack('((()))'))
     print(balance_par_str_with_stack('(()'))

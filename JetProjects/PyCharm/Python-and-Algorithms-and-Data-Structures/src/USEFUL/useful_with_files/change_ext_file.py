@@ -3,10 +3,10 @@
 
 __author__ = "bt3"
 
-
 import os
 import sys
 import shutil
+
 
 def change_file_ext():
     """ read a file and an extension from the command line and produces a copy with its extension changed"""
@@ -15,16 +15,13 @@ def change_file_ext():
         sys.exit()
 
     name = os.path.splitext(sys.argv[1])[0] + "." + sys.argv[2]
-    print (name)
+    print(name)
 
     try:
         shutil.copyfile(sys.argv[1], name)
     except OSError as err:
-        print (err)
-
+        print(err)
 
 
 if __name__ == '__main__':
     change_file_ext()
-
-

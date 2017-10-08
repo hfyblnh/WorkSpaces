@@ -4,9 +4,10 @@ __author__ = "bt3"
 
 from collections import defaultdict
 
-def  defaultdict_example():
+
+def defaultdict_example():
     ''' show some examples for defaultdicts '''
-    pairs = {('a', 1), ('b',2), ('c',3)}
+    pairs = {('a', 1), ('b', 2), ('c', 3)}
 
     d1 = {}
     for key, value in pairs:
@@ -23,5 +24,3 @@ def  defaultdict_example():
 
 if __name__ == '__main__':
     defaultdict_example()
-
-

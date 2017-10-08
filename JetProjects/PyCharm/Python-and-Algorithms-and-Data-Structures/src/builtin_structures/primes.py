@@ -2,13 +2,13 @@
 
 __author__ = "bt3"
 
-
 '''
 find prime factors of a number.
 '''
 
 import math
 import random
+
 
 def find_prime_factors(n):
     '''
@@ -18,7 +18,7 @@ def find_prime_factors(n):
     []
     '''
 
-    divisors = [d for d in range(2, n//2 + 1) if n % d == 0]
+    divisors = [d for d in range(2, n // 2 + 1) if n % d == 0]
     primes = [d for d in divisors if is_prime(d)]
 
     return primes
@@ -32,16 +32,17 @@ def is_prime(n):
 
 
 ''' return a n-bit prime '''
+
+
 def generate_prime(number=3):
     while 1:
-        p = random.randint(pow(2, number-2), pow(2, number-1)-1)
+        p = random.randint(pow(2, number - 2), pow(2, number - 1) - 1)
         p = 2 * p + 1
         if find_prime_factors(p):
             return p
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

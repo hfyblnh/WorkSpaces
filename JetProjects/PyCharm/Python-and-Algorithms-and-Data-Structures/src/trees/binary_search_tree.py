@@ -4,8 +4,7 @@ __author__ = "bt3"
 
 
 class Node(object):
-
-    def __init__(self, item=None,):
+    def __init__(self, item=None, ):
 
         self.item = item
         self.left = None
@@ -13,7 +12,6 @@ class Node(object):
 
     def __repr__(self):
         return '{}'.format(self.item)
-
 
     def _add(self, value):
         new_node = Node(value)
@@ -29,29 +27,27 @@ class Node(object):
             else:
                 print("BSTs do not support repeated items.")
 
-        return self # this is necessary!!!
-
+        return self  # this is necessary!!!
 
     def _search(self, value):
         if self.item == value:
-            return True # or self
+            return True  # or self
 
         elif self.left and value < self.item:
-                return self.left._search(value)
+            return self.left._search(value)
 
         elif self.right and value > self.item:
-                return self.right._search(value)
+            return self.right._search(value)
 
         else:
             return False
 
-
     def _isLeaf(self):
         return not self.right and not self.left
 
-
     def _printPreorder(self):
-        print self.item
+        print
+        self.item
 
         if self.left:
             self.left._printPreorder()
@@ -71,10 +67,7 @@ class Node(object):
         return nodes
 
 
-
-
 class BST(object):
-
     def __init__(self):
         self.root = None
 
@@ -102,19 +95,20 @@ class BST(object):
 if __name__ == '__main__':
 
     bst = BST()
-    print "Adding nodes 1 to 10 in the tree..."
+    print
+    "Adding nodes 1 to 10 in the tree..."
     for i in range(1, 11):
         bst.add(i)
 
     print
-    print "Searching for nodes 16 and 6"
-    print bst.search(16)
-    print bst.search(6)
+    print
+    "Searching for nodes 16 and 6"
+    print
+    bst.search(16)
+    print
+    bst.search(6)
 
     print
-    print "Printing preorder..."
+    print
+    "Printing preorder..."
     bst.printPreorder()
-
-
-
-

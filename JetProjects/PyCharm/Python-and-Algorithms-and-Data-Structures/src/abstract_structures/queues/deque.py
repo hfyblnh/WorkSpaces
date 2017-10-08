@@ -6,14 +6,13 @@ __author__ = "bt3"
 
 from queue import Queue
 
-class Deque(Queue):
 
+class Deque(Queue):
     def enqueue_back(self, item):
         self.items.append(item)
 
     def dequeue_front(self):
         return self.items.pop(0)
-
 
 
 if __name__ == '__main__':

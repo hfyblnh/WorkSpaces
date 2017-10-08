@@ -2,13 +2,12 @@
 
 __author__ = "bt3"
 
-
 ''' Implement a unordered linked list, i.e. a LIFO linked list (like a stack) '''
 
 from node import Node
 
-class LinkedListLIFO(object):
 
+class LinkedListLIFO(object):
     def __init__(self):
         self.head = None
         self.length = 0
@@ -67,8 +66,6 @@ class LinkedListLIFO(object):
             print('Node with value {} not found'.format(value))
 
 
-
-
 if __name__ == '__main__':
     ll = LinkedListLIFO()
     for i in range(1, 5):
@@ -85,6 +82,6 @@ if __name__ == '__main__':
     ll._add(15)
     ll._printList()
     print("The list after deleting everything...")
-    for i in range(ll.length-1, -1, -1):
+    for i in range(ll.length - 1, -1, -1):
         ll.deleteNode(i)
     ll._printList()

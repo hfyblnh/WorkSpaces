@@ -16,10 +16,8 @@ class LinkedQueue(object):
         self.head = None
         self.tail = None
 
-
     def isEmpty(self):
         return not bool(self.head)
-
 
     def dequeue(self):
         if self.head:
@@ -28,7 +26,6 @@ class LinkedQueue(object):
             return value
         else:
             print('Queue is empty, cannot dequeue.')
-
 
     def enqueue(self, value):
         node = Node(value)
@@ -40,27 +37,22 @@ class LinkedQueue(object):
                 self.tail.pointer = node
             self.tail = node
 
-
     def size(self):
         node = self.head
         num_nodes = 0
         while node:
-                num_nodes += 1
-                node = node.pointer
+            num_nodes += 1
+            node = node.pointer
         return num_nodes
-
 
     def peek(self):
         return self.head.value
-
 
     def _print(self):
         node = self.head
         while node:
             print(node.value)
             node = node.pointer
-
-
 
 
 if __name__ == '__main__':
@@ -77,4 +69,3 @@ if __name__ == '__main__':
     print("Dequeue...", queue.dequeue())
     print("Queue peek: ", queue.peek())
     queue._print()
-

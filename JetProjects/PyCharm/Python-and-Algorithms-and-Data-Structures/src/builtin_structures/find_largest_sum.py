@@ -2,8 +2,6 @@
 
 __author__ = "bt3"
 
-
-
 '''
    You are given an array of integers (both positive and negative).
    Find the contiguous sequence with the largest sum.
@@ -25,7 +23,7 @@ def find_largest_sum(array):
 
     for i in array:
 
-        sum_here +=  i
+        sum_here += i
 
         if sum_here < 0:
             sum_here = 0
@@ -36,7 +34,7 @@ def find_largest_sum(array):
     return sum_
 
 
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

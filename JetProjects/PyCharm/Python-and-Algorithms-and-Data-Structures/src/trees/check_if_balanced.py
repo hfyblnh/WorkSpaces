@@ -6,15 +6,12 @@ from binary_search_tree import BST, Node
 from binary_tree import BT, Node
 
 
-
 def isBalanced(node, left=0, right=0):
     if not node:
         return (left - right) < 2
 
-    return isBalanced(node.left, left+1, right) and \
-        isBalanced(node.right, left, right+1)
-
-
+    return isBalanced(node.left, left + 1, right) and \
+           isBalanced(node.right, left, right + 1)
 
 
 if __name__ == '__main__':
@@ -22,10 +19,10 @@ if __name__ == '__main__':
     for i in range(1, 10):
         bt.add(i)
 
-    assert(isBalanced(bt.root) == True)
+    assert (isBalanced(bt.root) == True)
 
     bt = BT()
     for i in range(1, 10):
         bt.add(i)
 
-    assert(isBalanced(bt.root) == False)
+    assert (isBalanced(bt.root) == False)

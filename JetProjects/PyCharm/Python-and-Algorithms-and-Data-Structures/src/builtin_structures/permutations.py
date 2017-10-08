@@ -3,7 +3,6 @@
 __author__ = "bt3"
 
 
-
 def perm(str1):
     '''
     >>> perm('123')
@@ -15,7 +14,7 @@ def perm(str1):
 
     res = []
     for i, c in enumerate(str1):
-        for cc in perm(str1[i+1:] + str1[:i]):
+        for cc in perm(str1[i + 1:] + str1[:i]):
             res.append(c + cc)
     return res
 
@@ -49,8 +48,6 @@ def ispermutation(s1, s2):
     return True
 
 
-
-
 def ispermutation2(s1, s2):
     '''
     >>> ispermutation2('231', '123')
@@ -64,7 +61,7 @@ def ispermutation2(s1, s2):
         return False
 
 
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

@@ -2,13 +2,14 @@
 
 __author__ = "bt3"
 
+
 def binary_serch_counting(lst1, k, lo=0, hi=None):
     if hi is None: hi = len(lst1)
     while lo < hi:
-        mid = (lo+hi)//2
+        mid = (lo + hi) // 2
         midval = lst1[mid]
         if midval < k:
-            lo = mid +1
+            lo = mid + 1
         elif midval > k:
             hi = mid
         else:
@@ -28,24 +29,27 @@ def find_time_occurrence_list(seq, k):
     count = 1
     sizet = len(seq)
 
-    for i in range(index_some_k+1, sizet): # go up
-        if seq[i] == k: count +=1
-        else: break
+    for i in range(index_some_k + 1, sizet):  # go up
+        if seq[i] == k:
+            count += 1
+        else:
+            break
 
-    for i in range(index_some_k-1, -1, -1): # go down
-        if seq[i] == k: count +=1
-        else: break
+    for i in range(index_some_k - 1, -1, -1):  # go down
+        if seq[i] == k:
+            count += 1
+        else:
+            break
 
     return count
 
 
 def test_find_time_occurrence_list():
-    seq = [1,2,2,2,2,2,2,5,6,6,7,8,9]
+    seq = [1, 2, 2, 2, 2, 2, 2, 5, 6, 6, 7, 8, 9]
     k = 2
-    assert(find_time_occurrence_list(seq, k) == 6)
+    assert (find_time_occurrence_list(seq, k) == 6)
     print('Tests passed!')
 
 
 if __name__ == '__main__':
     test_find_time_occurrence_list()
-

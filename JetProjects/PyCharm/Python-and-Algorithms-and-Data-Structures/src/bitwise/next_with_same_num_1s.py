@@ -2,7 +2,6 @@
 
 __author__ = "bt3"
 
-
 ''' Give a positive int, print the next smallest and next largest ints with
     same number of 1 bits.
     The brute force is:
@@ -11,11 +10,10 @@ __author__ = "bt3"
 '''
 
 
-
 def print_prev_same_1s(num):
     n1s = find_num_1s(num)
     # find prev
-    i = num-1
+    i = num - 1
     while True:
         n1s_here = find_num_1s(i)
         if n1s_here == n1s:
@@ -24,10 +22,11 @@ def print_prev_same_1s(num):
         if i < 0:
             return None
 
+
 def print_next_same_1s(num):
     n1s = find_num_1s(num)
     # find next
-    i = num+1
+    i = num + 1
     while True:
         n1s_here = find_num_1s(i)
         if n1s_here == n1s:
@@ -35,7 +34,6 @@ def print_next_same_1s(num):
         i += 1
         if i < 0:
             return None
-
 
 
 def find_num_1s(num):
@@ -47,13 +45,9 @@ def find_num_1s(num):
     return counter
 
 
-
-
-
 if __name__ == '__main__':
     num = 0b1001
     n = '0b1010'
     p = '0b110'
     print_prev_same_1s(num) == p
     print_next_same_1s(num) == n
-

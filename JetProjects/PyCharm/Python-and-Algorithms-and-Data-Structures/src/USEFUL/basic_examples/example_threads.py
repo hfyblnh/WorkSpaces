@@ -4,10 +4,13 @@ __author__ = "bt3"
 
 import threading
 
+
 def worker(num):
     """thread worker function"""
-    print 'Worker: %s' % num
+    print
+    'Worker: %s' % num
     return
+
 
 threads = []
 for i in range(5):

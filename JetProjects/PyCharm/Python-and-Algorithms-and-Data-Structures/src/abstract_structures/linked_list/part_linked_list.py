@@ -5,13 +5,11 @@ __author__ = "bt3"
 ''' This function divides a linked list in a value, where everything smaller than this value
     goes to the front, and everything large goes to the back:'''
 
-
 from linked_list_fifo import LinkedListFIFO
 from node import Node
 
 
 def partList(ll, n):
-
     more = LinkedListFIFO()
     less = LinkedListFIFO()
 
@@ -38,8 +36,6 @@ def partList(ll, n):
     return less
 
 
-
-
 if __name__ == '__main__':
 
     ll = LinkedListFIFO()
@@ -53,5 +49,3 @@ if __name__ == '__main__':
     print('After Part')
     newll = partList(ll, 6)
     newll._printList()
-
-

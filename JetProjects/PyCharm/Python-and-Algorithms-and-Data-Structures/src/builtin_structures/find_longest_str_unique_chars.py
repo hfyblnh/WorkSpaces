@@ -2,10 +2,10 @@
 
 __author__ = "bt3"
 
-
 '''
 given a string, find longest string with unique characters
 '''
+
 
 def find_longest(string):
     '''
@@ -31,8 +31,7 @@ def find_longest(string):
     return maxs
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

@@ -4,7 +4,8 @@ __author__ = "bt3"
 
 from collections import Counter
 
-def  Counter_example():
+
+def Counter_example():
     ''' it is a dictionary that maps the items to the number of occurrences '''
     seq1 = [1, 2, 3, 5, 1, 2, 5, 5, 2, 5, 1, 4]
     seq_counts = Counter(seq1)
@@ -26,7 +27,6 @@ def  Counter_example():
     print(seq_counts + seq_counts_2)
     print(seq_counts - seq_counts_2)
 
+
 if __name__ == '__main__':
     Counter_example()
-
-

@@ -17,5 +17,7 @@ try:
 finally:
     f.close()
 
-print 'FILE:'
-print body
+print
+'FILE:'
+print
+body

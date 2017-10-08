@@ -16,7 +16,6 @@ class dNode(object):
 
 
 class dLinkList(LinkedListFIFO):
-
     def printListInverse(self):
         node = self.tail
         while node:
@@ -75,7 +74,6 @@ if __name__ == '__main__':
     ll._add(15)
     ll._printList()
     print("The list after deleting everything...")
-    for i in range(ll.length-1, -1, -1):
+    for i in range(ll.length - 1, -1, -1):
         ll.deleteNode(i)
     ll._printList()
-

@@ -3,7 +3,6 @@
 __author__ = "bt3"
 
 
-
 def reversing_words(word):
     """
     >>> reversing_words('buffy is awesome')
@@ -37,9 +36,7 @@ def reversing_words3(s):
     return ' '.join(words)
 
 
-
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

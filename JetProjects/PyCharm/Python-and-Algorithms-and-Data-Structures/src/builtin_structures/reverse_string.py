@@ -14,7 +14,6 @@ def revert(string):
     return string[::-1]
 
 
-
 def reverse_string_inplace(s):
     '''
     >>> s = 'hello'
@@ -28,10 +27,7 @@ def reverse_string_inplace(s):
     return s
 
 
-
-
-
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

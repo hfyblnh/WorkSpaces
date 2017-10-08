@@ -25,8 +25,7 @@ def find_how_many_1_in_a_binary(n):
     return counter
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

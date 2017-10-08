@@ -11,7 +11,7 @@ class HashTable(object):
 
     # Get the slot
     def hash_key(self, value):
-        return hash(value)%self.slots
+        return hash(value) % self.slots
 
     # When creating the table, add list struct 
     # to each slot
@@ -27,13 +27,14 @@ class HashTable(object):
     # Aux: print table
     def print_table(self):
         for key in range(self.slots):
-            print "Key is {0}, value is {1}.".format(key, self.table[key])
+            print
+            "Key is {0}, value is {1}.".format(key, self.table[key])
 
     # Aux: find item
     def find_item(self, item):
         item_hash = self.hash_key(item)
         return item in self.table[item_hash]
-        
+
 
 if __name__ == '__main__':
     dic = HashTable(5)
@@ -41,5 +42,5 @@ if __name__ == '__main__':
         dic.add_item(i)
 
     dic.print_table()
-    assert(dic.find_item(20) == False)
-    assert(dic.find_item(21) == True)
+    assert (dic.find_item(20) == False)
+    assert (dic.find_item(21) == True)

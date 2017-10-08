@@ -22,10 +22,10 @@ def setdefault_dict(dict_data):
 
 def test_setdef(module_name='this module'):
     dict_data = (('key1', 'value1'),
-               ('key1', 'value2'),
-               ('key2', 'value3'),
-               ('key2', 'value4'),
-               ('key2', 'value5'),)
+                 ('key1', 'value2'),
+                 ('key2', 'value3'),
+                 ('key2', 'value4'),
+                 ('key2', 'value5'),)
     print(usual_dict(dict_data))
     print(setdefault_dict(dict_data))
 
@@ -35,4 +35,3 @@ def test_setdef(module_name='this module'):
 
 if __name__ == '__main__':
     test_setdef()
-

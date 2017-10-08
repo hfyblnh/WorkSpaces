@@ -10,7 +10,7 @@ class HashTable(object):
         self.create_table()
 
     def hash_key(self, value):
-        return hash(value)%self.slots
+        return hash(value) % self.slots
 
     def create_table(self):
         for i in range(self.slots):
@@ -22,7 +22,8 @@ class HashTable(object):
 
     def print_table(self):
         for key in range(len(self.table)):
-            print "Key is %s, value is %s." %(key, self.table[key])
+            print
+            "Key is %s, value is %s." % (key, self.table[key])
 
     def find_item(self, item):
         pos = self.hash_key(item)
@@ -31,11 +32,12 @@ class HashTable(object):
         else:
             return False
 
+
 if __name__ == '__main__':
     dic = HashTable(5)
     for i in range(1, 40, 2):
         dic.add_item(i)
 
     dic.print_table()
-    assert(dic.find_item(20) == False)
-    assert(dic.find_item(21) == True)
+    assert (dic.find_item(20) == False)
+    assert (dic.find_item(21) == True)

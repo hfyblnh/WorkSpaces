@@ -2,7 +2,6 @@
 
 __author__ = "bt3"
 
-
 from collections import deque
 from binary_search_tree import BST, Node
 from binary_tree import BT, Node
@@ -61,18 +60,23 @@ def inorder(tree, nodes=None):
 
 if __name__ == '__main__':
 
-
     # bt
     bt = BT()
     l = [10, 5, 6, 3, 8, 2, 1, 11, 9, 4]
     for i in l:
         bt.add(i)
-    print 'BT...'
-    print 'Original:    ', l
-    print 'Preorder:    ', preorder(bt.root)
-    print 'Postorder:   ', postorder(bt.root)
-    print 'Inorder:     ', inorder(bt.root)
-    print 'Breath:      ', BFT(bt)
+    print
+    'BT...'
+    print
+    'Original:    ', l
+    print
+    'Preorder:    ', preorder(bt.root)
+    print
+    'Postorder:   ', postorder(bt.root)
+    print
+    'Inorder:     ', inorder(bt.root)
+    print
+    'Breath:      ', BFT(bt)
 
     # bst
     bst = BST()
@@ -81,9 +85,15 @@ if __name__ == '__main__':
         bst.add(i)
 
     print
-    print 'BST ...'
-    print 'Original:    ', l
-    print 'Preorder:    ', preorder(bst.root)
-    print 'Postorder:   ', postorder(bst.root)
-    print 'Inorder:     ', inorder(bst.root)
-    print 'Breath:      ', BFT(bst)
+    print
+    'BST ...'
+    print
+    'Original:    ', l
+    print
+    'Preorder:    ', preorder(bst.root)
+    print
+    'Postorder:   ', postorder(bst.root)
+    print
+    'Inorder:     ', inorder(bst.root)
+    print
+    'Breath:      ', BFT(bst)

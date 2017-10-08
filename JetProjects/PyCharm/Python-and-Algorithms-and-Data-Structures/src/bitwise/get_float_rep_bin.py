@@ -7,6 +7,7 @@ __author__ = "bt3"
     most 32 chars, print error:
 '''
 
+
 def get_float_rep(num):
     '''
     >>> get_float_rep(0.72)
@@ -21,7 +22,7 @@ def get_float_rep(num):
     result = '.'
     while num:
         if len(result) >= 32: return 'Error 2', result
-        r = num*2
+        r = num * 2
         if r >= 1:
             result += '1'
             num = r - 1
@@ -33,5 +34,5 @@ def get_float_rep(num):
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

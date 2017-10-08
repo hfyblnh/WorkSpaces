@@ -2,10 +2,10 @@
 
 __author__ = "bt3"
 
-
 '''
 Implement a trie. (Write the API and code for inserting into a trie).
 '''
+
 
 def make_trie(*args):
     trie = {}
@@ -35,7 +35,7 @@ def remove_from_trie(trie, word, depth):
     if len(word) == depth + 1:
         del trie[word[depth]]
         if not trie:
-           return True
+            return True
         return False
     else:
         temp_trie = trie
@@ -49,17 +49,15 @@ def remove_from_trie(trie, word, depth):
 
 if __name__ == '__main__':
     trie = make_trie('hello', 'abc', 'baz', 'bar', 'barz')
-    print 'This is the trie:'
-    print trie
+    print
+    'This is the trie:'
+    print
+    trie
 
-    assert(in_trie(trie, 'hello') == True)
-    assert(in_trie(trie, 'bar') == True)
-    assert(in_trie(trie, 'bab') == False)
-    assert(in_trie(trie, 'zzz') == False)
+    assert (in_trie(trie, 'hello') == True)
+    assert (in_trie(trie, 'bar') == True)
+    assert (in_trie(trie, 'bab') == False)
+    assert (in_trie(trie, 'zzz') == False)
 
     remove_from_trie(trie, 'abc', 0)
-    assert(in_trie(trie, 'abc') == False)
-
-
-
-
+    assert (in_trie(trie, 'abc') == False)

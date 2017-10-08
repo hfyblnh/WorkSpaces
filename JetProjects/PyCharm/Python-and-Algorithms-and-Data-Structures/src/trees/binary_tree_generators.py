@@ -15,11 +15,11 @@ class Node(object):
             self.value = new_node
         elif not self.left:
             self.left = new_node
-        elif not self. right:
+        elif not self.right:
             self.right = new_node
         else:
             self.left = self.left.add(value)
-        return self # without this, it doesn't add!
+        return self  # without this, it doesn't add!
 
     def search(self, item):
         if self.value == item:
@@ -59,12 +59,12 @@ class Node(object):
 
     # this is the most basic way to write this function
     def preorder_simple(self):
-        print self.value
+        print
+        self.value
         if self.left:
             self.left.preorder_simple()
         if self.right:
             self.right.preorder_simple()
-
 
     # Another possibility: use an array (a little bit more expensive):
     def preorder_array(self):
@@ -76,7 +76,6 @@ class Node(object):
         if self.right:
             nodes.extend(self.right.preorder_array())
         return nodes
-
 
 
 class BT(object):
@@ -132,39 +131,54 @@ if __name__ == '__main__':
     for i in range(1, 11):
         tree.add(i)
 
-    print 'Searching for node 4'
-    print tree.search(4)
+    print
+    'Searching for node 4'
+    print
+    tree.search(4)
 
-    print 'Searching for node 1'
-    print tree.search(1)
+    print
+    'Searching for node 1'
+    print
+    tree.search(1)
 
-    print 'Searching for node 12'
-    print tree.search(12)
+    print
+    'Searching for node 12'
+    print
+    tree.search(12)
 
-    print 'Pre-order generator...'
+    print
+    'Pre-order generator...'
     getree = tree.preorder()
     for i in range(10):
-        print next(getree)
+        print
+        next(getree)
     print
-    print 'Pre-order array...'
-
-    print tree.preorder_array()
+    print
+    'Pre-order array...'
 
     print
-    print 'Pre-order simple...'
+    tree.preorder_array()
+
+    print
+    print
+    'Pre-order simple...'
 
     tree.preorder_simple()
 
     print
-    print 'Inorder...'
+    print
+    'Inorder...'
 
     getree = tree.inorder()
     for i in range(10):
-        print next(getree)
+        print
+        next(getree)
 
     print
-    print 'Postorder...'
+    print
+    'Postorder...'
 
     getree = tree.postorder()
     for i in range(10):
-        print next(getree)
+        print
+        next(getree)

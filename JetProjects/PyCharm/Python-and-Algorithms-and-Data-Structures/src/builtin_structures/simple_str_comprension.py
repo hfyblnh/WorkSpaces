@@ -2,8 +2,8 @@
 
 __author__ = "bt3"
 
-
 from collections import Counter
+
 
 def str_comp(s):
     '''
@@ -31,4 +31,5 @@ def str_comp(s):
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

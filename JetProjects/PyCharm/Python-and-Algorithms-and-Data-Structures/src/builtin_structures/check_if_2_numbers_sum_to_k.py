@@ -19,6 +19,7 @@ It takes O(nlog n) times two.
 
 from collections import defaultdict, Counter
 
+
 def check_sum(array, k):
     '''
     >>> check_sum([3, 2, 6, 7, 9, 1], 8)
@@ -32,9 +33,9 @@ def check_sum(array, k):
     res = []
 
     for i in array:
-        if k-i in dict:
-            res.append((i, k-i))
-            del dict[k-i]
+        if k - i in dict:
+            res.append((i, k - i))
+            del dict[k - i]
         else:
             dict[i] = 1
 
@@ -56,16 +57,18 @@ def check_sum2(array, k):
         dict[i] += 1
 
     for i in array:
-        if dict[k-i] > 0:
-            if i == k-i and dict[k-i] > 1:
-                    res.add((i, k-i))
-                    dict[k-i] -= 2
-            elif i == k-i:
-                res.add((i, k-i))
-                dict[k-i] -= 1
+        if dict[k - i] > 0:
+            if i == k - i and dict[k - i] > 1:
+                res.add((i, k - i))
+                dict[k - i] -= 2
+            elif i == k - i:
+                res.add((i, k - i))
+                dict[k - i] -= 1
 
     return res
 
+
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

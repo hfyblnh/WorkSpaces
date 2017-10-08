@@ -3,10 +3,9 @@
 
 __author__ = "bt3"
 
-
-
 import os
 import sys
+
 
 def read_data(filename):
     lines = []
@@ -21,7 +20,7 @@ def read_data(filename):
     finally:
         if fh is not None:
             fh.close()
-	return lines
+        return lines
 
 
 def write_data(lines, filename):
@@ -32,7 +31,7 @@ def write_data(lines, filename):
             fh.write(line)
     except (EnvironmentError) as err:
         print(err)
-	finally:
+        finally:
         if fh is not None:
             fh.close()
 
@@ -41,7 +40,7 @@ def remove_blank_lines():
     """ read a list of filenames on the command line and for each one produces another file with the same content but with no blank lines """
 
     if len(sys.argv) < 2:
-        print ("Usage: noblank.py infile1 [infile2...]")
+        print("Usage: noblank.py infile1 [infile2...]")
 
     for filename in sys.argv[1:]:
         lines = read_data(filename)
@@ -51,4 +50,3 @@ def remove_blank_lines():
 
 if __name__ == '__main__':
     remove_blank_lines()
-

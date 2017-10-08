@@ -22,4 +22,5 @@ def find_bit_len(int_num):
 if __name__ == '__main__':
     for i in range(17):
         print(find_bit_len(i))
-        print i.bit_length()
+        print
+        i.bit_length()

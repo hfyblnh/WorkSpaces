@@ -15,24 +15,23 @@ def binary_search_matrix_rec(m, key, lo=0, hi=None):
 
     rows = len(m)
     cols = len(m[0])
-    hi = hi or rows*cols
+    hi = hi or rows * cols
 
     if hi > lo:
 
-        mid = (hi + lo)//2
-        row = mid//cols
-        col = mid%cols
+        mid = (hi + lo) // 2
+        row = mid // cols
+        col = mid % cols
         item = m[row][col]
 
         if key == item:
             return row, col
         elif key < item:
-            return binary_search_matrix_rec(m, key, lo, mid-1)
+            return binary_search_matrix_rec(m, key, lo, mid - 1)
         else:
-            return binary_search_matrix_rec(m, key, mid+1, hi)
+            return binary_search_matrix_rec(m, key, mid + 1, hi)
 
     return None
-
 
 
 def binary_search_matrix_iter(m, key):
@@ -44,19 +43,19 @@ def binary_search_matrix_iter(m, key):
         return None
     rows = len(m)
     cols = len(m[0])
-    lo, hi = 0, rows*cols
+    lo, hi = 0, rows * cols
 
     while lo < hi:
-        mid = (hi + lo)//2
-        row = mid//rows
-        col = mid%rows
+        mid = (hi + lo) // 2
+        row = mid // rows
+        col = mid % rows
         item = m[row][col]
         if key == item:
             return (row, col)
         elif key < item:
             hi = mid
         else:
-            lo = mid +1
+            lo = mid + 1
 
     return None
 
@@ -73,7 +72,7 @@ def searching_matrix(m, key):
         return None
     rows = len(m)
     cols = len(m[0])
-    i, j = 0, cols -1
+    i, j = 0, cols - 1
 
     while i < rows and j > 0:
         item = m[i][j]
@@ -89,4 +88,5 @@ def searching_matrix(m, key):
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

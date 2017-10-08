@@ -4,6 +4,7 @@ __author__ = "bt3"
 
 import random
 
+
 def testing_random():
     ''' testing the module random'''
     values = [1, 2, 3, 4]
@@ -18,10 +19,9 @@ def testing_random():
     print(values)
 
     ''' create random integers '''
-    print(random.randint(0,10))
-    print(random.randint(0,10))
+    print(random.randint(0, 10))
+    print(random.randint(0, 10))
 
 
 if __name__ == '__main__':
     testing_random()
-

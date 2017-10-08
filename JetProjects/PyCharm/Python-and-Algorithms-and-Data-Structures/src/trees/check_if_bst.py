@@ -2,7 +2,6 @@
 
 __author__ = "bt3"
 
-
 from binary_search_tree import BST, Node
 from binary_tree import BT, Node
 
@@ -18,13 +17,11 @@ def isBST(node, min_node=float("-infinity"), maxVal=float("infinity")):
            isBST(node.right, node.item, maxVal)
 
 
-
 def isBST_other_method(node, max_node=None, min_node=None):
-
     if not node:
         return True
 
-    left, right =  True, True
+    left, right = True, True
     min_node = min_node or float('inf')
     max_node = max_node or -float('inf')
 
@@ -33,19 +30,16 @@ def isBST_other_method(node, max_node=None, min_node=None):
             left = False
         else:
             max_node = node.item
-            left =  isBST(node.left, max_node, min_node)
+            left = isBST(node.left, max_node, min_node)
 
     if node.right:
         if node.right.item < node.item or node.right.item < min_node:
-            rihjt =  False
+            rihjt = False
         else:
             min_node = node.item
-            right =  isBST(node.right, max_node, min_node)
+            right = isBST(node.right, max_node, min_node)
 
     return left and right
-
-
-
 
 
 if __name__ == '__main__':
@@ -53,12 +47,10 @@ if __name__ == '__main__':
     for i in range(1, 10):
         bt.add(i)
 
-    assert(isBST(bt.root) == True)
+    assert (isBST(bt.root) == True)
 
     bt = BT()
     for i in range(1, 10):
         bt.add(i)
 
-    assert(isBST(bt.root) == False)
-
-
+    assert (isBST(bt.root) == False)

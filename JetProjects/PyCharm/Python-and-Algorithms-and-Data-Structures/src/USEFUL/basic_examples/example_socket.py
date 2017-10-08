@@ -3,12 +3,10 @@
 
 __author__ = "bt3"
 
-
 import socket
 
 
 def netcat(hostname, port, content):
-
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     s.connect((hostname, port))
@@ -25,11 +23,10 @@ def netcat(hostname, port, content):
     return adata
 
 
-
 if __name__ == '__main__':
-
     PORT = 12345
     HOSTNAME = '54.209.5.48'
 
     message = netcat(HOSTNAME, PORT, 'Hello!')[1]
-    print message
+    print
+    message

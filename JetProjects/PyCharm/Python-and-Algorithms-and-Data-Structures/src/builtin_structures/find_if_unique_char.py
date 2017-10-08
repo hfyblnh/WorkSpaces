@@ -2,9 +2,8 @@
 
 __author__ = "bt3"
 
-
-
 import collections
+
 
 def find_if_unique_chars(word):
     """
@@ -29,4 +28,5 @@ def find_if_unique_chars(word):
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

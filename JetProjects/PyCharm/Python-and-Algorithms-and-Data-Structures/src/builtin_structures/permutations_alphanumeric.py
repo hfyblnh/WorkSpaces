@@ -2,10 +2,10 @@
 
 __author__ = "bt3"
 
-
 ''' Write code to generate all possible case permutations of a given
 lower-cased string
 '''
+
 
 def alpha_permutation(string):
     '''
@@ -21,7 +21,7 @@ def alpha_permutation(string):
     result = []
 
     for i, c in enumerate(string):
-        rest =  string[i+1:] + string[:i]
+        rest = string[i + 1:] + string[:i]
         for cc in alpha_permutation(rest):
             if cc.isalpha():
                 result.append(c.upper() + cc)
@@ -30,8 +30,7 @@ def alpha_permutation(string):
     return result
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

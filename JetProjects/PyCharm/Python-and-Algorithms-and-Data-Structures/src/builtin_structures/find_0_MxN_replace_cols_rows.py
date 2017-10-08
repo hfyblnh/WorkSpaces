@@ -31,5 +31,5 @@ def find_0_MxN(m):
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

@@ -4,14 +4,13 @@ __author__ = "bt3"
 
 from collections import deque
 
-class Node(object):
 
+class Node(object):
     def __init__(self, item=None):
 
         self.item = item
         self.left = None
         self.right = None
-
 
     def _add(self, value):
         new_node = Node(value)
@@ -24,26 +23,24 @@ class Node(object):
                 self.left = self.left and self.left._add(value) or new_node
             else:
                 print("BSTs do not support repeated items.")
-        return self 
-
+        return self
 
     def _search(self, value):
         if self.item == value:
-            return True 
+            return True
         elif self.left and value < self.item:
-                return self.left._search(value)
+            return self.left._search(value)
         elif self.right and value > self.item:
-                return self.right._search(value)
+            return self.right._search(value)
         else:
             return False
-
 
     def _isLeaf(self):
         return not self.right and not self.left
 
-
     def _printPreorder(self):
-        print self.item
+        print
+        self.item
 
         if self.left:
             self.left._printPreorder()
@@ -51,7 +48,6 @@ class Node(object):
         if self.right:
             self.right._printPreorder()
 
-            
     def _preorder_array(self):
         nodes = []
         if self.item:
@@ -63,9 +59,7 @@ class Node(object):
         return nodes
 
 
-
 class BST(object):
-
     def __init__(self):
         self.root = None
 
@@ -88,8 +82,6 @@ class BST(object):
             return self.root._preorder_array()
         else:
             return 'Tree is empty.'
-
-
 
 
 def BFT(tree):
@@ -143,8 +135,6 @@ def inorder(tree, nodes=None):
     return nodes
 
 
-        
-        
 if __name__ == '__main__':
     bst = BST()
     l = [10, 5, 6, 3, 8, 2, 1, 11, 9, 4]
@@ -152,14 +142,23 @@ if __name__ == '__main__':
         bst.add(i)
 
     print
-    print "Searching for nodes 16 and 6:"
-    print bst.search(16)
-    print bst.search(6)
+    print
+    "Searching for nodes 16 and 6:"
+    print
+    bst.search(16)
+    print
+    bst.search(6)
 
     print
-    print 'Traversals:'
-    print 'Original:    ', l
-    print 'Preorder:    ', preorder(bst.root)
-    print 'Postorder:   ', postorder(bst.root)
-    print 'Inorder:     ', inorder(bst.root)
-    print 'BSF:         ', BFT(bst)
+    print
+    'Traversals:'
+    print
+    'Original:    ', l
+    print
+    'Preorder:    ', preorder(bst.root)
+    print
+    'Postorder:   ', postorder(bst.root)
+    print
+    'Inorder:     ', inorder(bst.root)
+    print
+    'BSF:         ', BFT(bst)

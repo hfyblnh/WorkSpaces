@@ -10,28 +10,30 @@ __author__ = "bt3"
 '''
 
 
-
 def clear_bit(num, i):
-    mask = ~ (1 << i)   # -0b10001
+    mask = ~ (1 << i)  # -0b10001
     return bin(num & mask)
 
 
 def clear_all_bits_from_i_to_0(num, i):
-    mask = ~ ( (1 << (i+1)) - 1)
+    mask = ~ ((1 << (i + 1)) - 1)
     return bin(num & mask)
 
 
 def clear_all_bits_from_most_sig_to_1(num, i):
-    mask =  ( 1 << i) -1
+    mask = (1 << i) - 1
     return bin(num & mask)
 
 
 if __name__ == '__main__':
     num = int('10010000', 2)
-    print clear_bit(num, 4)   # '0b10000000'
+    print
+    clear_bit(num, 4)  # '0b10000000'
 
     num = int('10010011', 2)
-    print clear_all_bits_from_i_to_0(num, 2)  # '0b10010000'
+    print
+    clear_all_bits_from_i_to_0(num, 2)  # '0b10010000'
 
     num = int('1110011', 2)
-    print clear_all_bits_from_most_sig_to_1(num, 2)  #'0b11'
+    print
+    clear_all_bits_from_most_sig_to_1(num, 2)  # '0b11'

@@ -2,20 +2,17 @@
 
 __author__ = "bt3"
 
-
 """ Using our deque class and Python's deque class """
-
 
 import string
 import collections
 
 from deque import Deque
 
-
 STRIP = string.whitespace + string.punctuation + "\"'"
 
-def palindrome_checker_with_deque(str1):
 
+def palindrome_checker_with_deque(str1):
     d1 = Deque()
     d2 = collections.deque()
 
@@ -23,7 +20,6 @@ def palindrome_checker_with_deque(str1):
         if s not in STRIP:
             d2.append(s)
             d1.enqueue(s)
-
 
     eq1 = True
     while d1.size() > 1 and eq1:
@@ -36,8 +32,6 @@ def palindrome_checker_with_deque(str1):
             eq2 = False
 
     return eq1, eq2
-
-
 
 
 if __name__ == '__main__':

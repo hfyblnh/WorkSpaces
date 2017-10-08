@@ -3,9 +3,7 @@
 __author__ = "bt3"
 
 
-
 def beating_stock(array):
-
     imin = 0
 
     # first deal is just buying in the next day (1)
@@ -25,7 +23,6 @@ def beating_stock(array):
 
 
 def beating_stock2(array):
-
     deal = 0
     min_value = array[0]
 
@@ -43,12 +40,12 @@ def beating_stock2(array):
     return deal
 
 
-
 if __name__ == '__main__':
     array = [7, 2, 3, 6, 5, 8, 5, 3, 4]
 
     deal = beating_stock(array)
-    print("Profit: %d, buying at %d, selling at %d." %(deal[0], deal[1], deal[2]))
+    print("Profit: %d, buying at %d, selling at %d." % (deal[0], deal[1], deal[2]))
 
     deal = beating_stock2(array)
-    print "Profit: " + str(deal)
+    print
+    "Profit: " + str(deal)

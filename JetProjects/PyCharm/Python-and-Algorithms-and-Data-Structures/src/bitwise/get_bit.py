@@ -17,11 +17,10 @@ def get_bit(num, i):
 
 if __name__ == '__main__':
     num = int('0100100', 2)
-    get_bit(num, 0)   # 0
-    get_bit(num, 1)   # 0
-    get_bit(num, 2)   # 1
-    get_bit(num, 3)   # 0
-    get_bit(num, 4)   # 0
-    get_bit(num, 5)   # 1
-    get_bit(num, 6)   # 0
-
+    get_bit(num, 0)  # 0
+    get_bit(num, 1)  # 0
+    get_bit(num, 2)  # 1
+    get_bit(num, 3)  # 0
+    get_bit(num, 4)  # 0
+    get_bit(num, 5)  # 1
+    get_bit(num, 6)  # 0

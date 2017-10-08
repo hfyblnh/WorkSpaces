@@ -11,23 +11,23 @@ def qs(array):
     if len(array) < 2:
         return array
 
-    piv = len(array)//2
+    piv = len(array) // 2
     piv_element = array[piv]
-    new_array = array[:piv] + array[piv+1:]
+    new_array = array[:piv] + array[piv + 1:]
 
-    left  = [a for a in new_array if a <= piv_element]
+    left = [a for a in new_array if a <= piv_element]
     right = [a for a in new_array if a > piv_element]
 
     return qs(left) + [array[piv]] + qs(right)
 
 
-
 # we can also divide them into two functions
 def partition(seq):
-    pi,seq = seq[0],seq[1:]
+    pi, seq = seq[0], seq[1:]
     lo = [x for x in seq if x <= pi]
     hi = [x for x in seq if x > pi]
     return lo, pi, hi
+
 
 def quick_sort_divided(seq):
     '''
@@ -40,7 +40,7 @@ def quick_sort_divided(seq):
     return quick_sort_divided(lo) + [pi] + quick_sort_divided(hi)
 
 
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

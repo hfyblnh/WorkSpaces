@@ -31,17 +31,26 @@ class Queue(object):
     def isempty(self):
         return not (self.enq + self.deq)
 
+
 if __name__ == '__main__':
     q = Queue()
-    for i in range(1,11):
+    for i in range(1, 11):
         q.enqueue(i)
-    print 'Size:',  q.size()
-    print 'Is empty?', q.isempty()
-    print 'Peak: ', q.peak()
     print
-    print 'Dequeuing...'
+    'Size:', q.size()
+    print
+    'Is empty?', q.isempty()
+    print
+    'Peak: ', q.peak()
+    print
+    print
+    'Dequeuing...'
     for i in range(10):
-        print q.deque()
-    print 'Size:',  q.size()
-    print 'Is empty?', q.isempty()
-    print 'Peak: ', q.peak()
+        print
+        q.deque()
+    print
+    'Size:', q.size()
+    print
+    'Is empty?', q.isempty()
+    print
+    'Peak: ', q.peak()

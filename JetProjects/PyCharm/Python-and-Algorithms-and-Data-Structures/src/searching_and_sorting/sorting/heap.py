@@ -6,21 +6,17 @@ __author__ = "bt3"
 class Heap(object):
     def __init__(self, data):
         self.data = data
-        for i in range(len(data)/2, -1, -1):
+        for i in range(len(data) / 2, -1, -1):
             self.__max_heapify__(i)
-
 
     def parent(self, i):
         return i >> 1
 
-
     def left_child(self, i):
         return (i << 1) + 1
 
-
     def right_child(self, i):
-        return (i << 1) + 2 # +2 instead of +1 because it's 0-indexed.
-
+        return (i << 1) + 2  # +2 instead of +1 because it's 0-indexed.
 
     def __max_heapify__(self, i):
         largest = i
@@ -33,7 +29,6 @@ class Heap(object):
             self.data[i], self.data[largest] = self.data[largest], self.data[i]
             self.__max_heapify__(largest)
 
-
     def extract_max(self):
         n = len(self.data)
         max_element = self.data[0]
@@ -41,5 +36,3 @@ class Heap(object):
         self.data = self.data[:n - 1]
         self.__max_heapify__(0)
         return max_element
-
-

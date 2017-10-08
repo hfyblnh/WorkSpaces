@@ -4,6 +4,7 @@ __author__ = "bt3"
 
 ''' Example of how to use a bit array in python as a "counter" dict'''
 
+
 def print_dupl_ba(l1):
     '''
     >>> l1 = [0, 1, 2, 3, 4, 2, 6, 7, 8, 9]
@@ -21,8 +22,7 @@ def print_dupl_ba(l1):
     return None
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

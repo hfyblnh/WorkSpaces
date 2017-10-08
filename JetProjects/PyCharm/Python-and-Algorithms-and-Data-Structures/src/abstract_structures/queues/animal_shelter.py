@@ -2,7 +2,6 @@
 
 __author__ = "bt3"
 
-
 """ A class for an animal shelter with two queues"""
 
 
@@ -14,7 +13,6 @@ class Node(object):
         self.timestamp = 0
 
 
-
 class AnimalShelter(object):
     def __init__(self):
         self.headCat = None
@@ -22,7 +20,6 @@ class AnimalShelter(object):
         self.tailCat = None
         self.tailDog = None
         self.animalNumber = 0
-
 
     # Queue any animal
 
@@ -45,7 +42,6 @@ class AnimalShelter(object):
                 self.tailDog.pointer = newAnimal
             self.tailDog = newAnimal
 
-
     # Dequeue methods
 
     def dequeueDog(self):
@@ -56,7 +52,6 @@ class AnimalShelter(object):
         else:
             return 'No Dogs!'
 
-
     def dequeueCat(self):
         if self.headCat:
             newAnimal = self.headCat
@@ -64,7 +59,6 @@ class AnimalShelter(object):
             return str(newAnimal.animalName)
         else:
             return 'No Cats!'
-
 
     def dequeueAny(self):
         if self.headCat and not self.headDog:
@@ -78,8 +72,6 @@ class AnimalShelter(object):
                 return self.dequeueCat()
         else:
             return ('No Animals!')
-
-
 
     def _print(self):
         print("Cats:")
@@ -95,7 +87,6 @@ class AnimalShelter(object):
 
 
 if __name__ == '__main__':
-
     qs = AnimalShelter()
     qs.enqueue('bob', 'cat')
     qs.enqueue('mia', 'cat')

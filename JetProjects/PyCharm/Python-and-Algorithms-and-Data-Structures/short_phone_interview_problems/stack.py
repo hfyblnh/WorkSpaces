@@ -1,5 +1,4 @@
-
-#!/usr/bin/env python
+# !/usr/bin/env python
 
 __author__ = "bt3"
 
@@ -30,11 +29,11 @@ class Stack(object):
             print('Stack is empty.')
 
 
-
 if __name__ == '__main__':
     q = Stack()
 
     for i in range(10):
         q.push(i)
     for i in range(11):
-        print q.pop()
+        print
+        q.pop()

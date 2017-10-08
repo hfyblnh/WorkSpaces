@@ -8,7 +8,7 @@ def fib_generator():
 
     while True:
         yield b
-        a, b = b, a+b
+        a, b = b, a + b
 
 
 def fib(n):
@@ -28,7 +28,7 @@ def fib(n):
 
     while count < n:
         count += 1
-        a, b = b, a+b
+        a, b = b, a + b
 
     return b
 
@@ -47,10 +47,9 @@ def fib_rec(n):
     return fib_rec(n - 1) + fib_rec(n - 2)
 
 
-
-
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()
 
     fib = fib_generator()

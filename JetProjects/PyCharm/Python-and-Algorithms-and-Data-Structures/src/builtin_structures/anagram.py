@@ -2,8 +2,8 @@
 
 __author__ = "bt3"
 
-
 from collections import Counter
+
 
 def is_anagram(s1, s2):
     '''
@@ -25,8 +25,10 @@ def is_anagram(s1, s2):
 
     return True
 
+
 ''' verify if words are anagrams by comparing a sum of  Unicode code
 point of the character'''
+
 
 def get_unicode_sum(word):
     s = 0
@@ -47,5 +49,5 @@ def is_anagram2(word1, word2):
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

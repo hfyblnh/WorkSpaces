@@ -14,7 +14,7 @@ def intersection_two_arrays_sets(seq1, seq2):
     set1 = set(seq1)
     set2 = set(seq2)
 
-    return set1.intersection(set2)  #same as list(set1 & set2)
+    return set1.intersection(set2)  # same as list(set1 & set2)
 
 
 def intersection_two_arrays_On2(seq1, seq2):
@@ -60,4 +60,5 @@ def intersection_two_arrays_On(seq1, seq2):
 
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

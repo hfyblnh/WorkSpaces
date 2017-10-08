@@ -8,6 +8,8 @@ How do you check whether the string has matching braces.
 '''
 
 from collections import Counter
+
+
 def check_if_balance(string):
     '''
     >>> check_if_balance('{[[(])}]')
@@ -28,13 +30,12 @@ def check_if_balance(string):
             table[index] -= 1
 
     for i in table.values():
-        if i !=-0:
+        if i != -0:
             return False
     return True
 
 
-
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
 
+    doctest.testmod()

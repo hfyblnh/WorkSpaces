@@ -8,7 +8,6 @@ import sys
 
 
 def count_unique_word():
-
     words = collections.defaultdict(int)
 
     strip = string.whitespace + string.punctuation + string.digits + "\"'"
@@ -23,4 +22,3 @@ def count_unique_word():
 
     for word in sorted(words):
         print("'{0}' occurs {1} times.".format(word, words[word]))
-

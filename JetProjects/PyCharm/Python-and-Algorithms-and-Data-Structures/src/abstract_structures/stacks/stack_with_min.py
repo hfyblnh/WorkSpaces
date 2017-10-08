@@ -18,20 +18,16 @@ class StackMin(Stack):
         self.items = []
         self.minimum = None
 
-
     def push(self, value):
         if self.isEmpty() or self.minimum > value:
-           self.minimum = value
+            self.minimum = value
         self.items.append(NodeWithMin(value, self.minimum))
-
 
     def peek(self):
         return self.items[-1].value
 
-
     def peekMinimum(self):
         return self.items[-1].minimum
-
 
     def pop(self):
         item = self.items.pop()
@@ -49,12 +45,11 @@ class StackMin(Stack):
         return '{}'.format(aux)
 
 
-
 if __name__ == '__main__':
     stack = StackMin()
     print("Is the stack empty? ", stack.isEmpty())
     print("Adding 0 to 10 in the stack...")
-    for i in range(10,3, -1):
+    for i in range(10, 3, -1):
         stack.push(i)
     print(stack)
 
