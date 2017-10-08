@@ -11,8 +11,7 @@ s.bind(('127.0.0.1', 9999))
 
 print('bind udp on 9999...')
 while True:
-	# 接受数据
-	data, addr = s.recvfrom(1024)
-	print('received from %s:%s.' % addr)
-	s.sendto(b'Hello, %s!' % data, addr)
-
+    # 接受数据
+    data, addr = s.recvfrom(1024)
+    print('received from %s:%s.' % addr)
+    s.sendto(b'Hello, %s!' % data, addr)

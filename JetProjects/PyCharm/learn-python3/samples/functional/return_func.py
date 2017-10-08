@@ -8,22 +8,22 @@
 
 
 def calc_sum1(*args):
-	ax = 0
-	for n in args:
-		ax += n
-	return ax
+    ax = 0
+    for n in args:
+        ax += n
+    return ax
 
 
 # 在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量。
 # 当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。
 def lazy_sum(*args):
-	def calc_sum2():
-		ax = 0
-		for n in args:
-			ax += n
-		return ax
+    def calc_sum2():
+        ax = 0
+        for n in args:
+            ax += n
+        return ax
 
-	return calc_sum2
+    return calc_sum2
 
 
 print(calc_sum1(1, 3, 5, 7, 9))
@@ -35,13 +35,13 @@ print(lazy_sum(2, 4, 6, 8, 10)())
 # 另一个需要注意的问题是，返回的函数并没有立刻执行，而是直到调用了f()才执行。我们来看一个例子：
 
 def count1():
-	fs = []
-	for i in range(1, 4):
-		def f():
-			return i * i
+    fs = []
+    for i in range(1, 4):
+        def f():
+            return i * i
 
-		fs.append(f)
-	return fs
+        fs.append(f)
+    return fs
 
 
 func1, func2, func3 = count1()
@@ -58,16 +58,16 @@ print(func1(), func2(), func3())
 
 # 如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：
 def count2():
-	def f2(j):
-		def g():
-			return j * j
+    def f2(j):
+        def g():
+            return j * j
 
-		return g
+        return g
 
-	fs2 = []
-	for i in range(1, 4):
-		fs2.append(f2(i))
-	return fs2
+    fs2 = []
+    for i in range(1, 4):
+        fs2.append(f2(i))
+    return fs2
 
 
 func4, func5, func6 = count2()

@@ -22,7 +22,7 @@ print(type('abc') == type(123))
 
 
 def fn():
-	pass
+    pass
 
 
 print(type(fn) == types.FunctionType)
@@ -48,8 +48,8 @@ print('ABC'.__len__())
 
 # 我们自己写的类，如果也想用len(myObj)的话，就自己写一个__len__()方法
 class MyDog(object):
-	def __len__(self):
-		return 100
+    def __len__(self):
+        return 100
 
 
 dog = MyDog()
@@ -58,11 +58,11 @@ print(len(dog))
 
 # 仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：
 class MyObject(object):
-	def __init__(self):
-		self.x = 9
+    def __init__(self):
+        self.x = 9
 
-	def power(self):
-		return self.x * self.x
+    def power(self):
+        return self.x * self.x
 
 
 print('attr')
@@ -82,9 +82,9 @@ print(getattr(obj, 'y'))
 
 # 一个正确的用法的例子如下：
 def readImage(fp):
-	if hasattr(fp, 'read'):
-		return readData(fp)
-	return None
+    if hasattr(fp, 'read'):
+        return readData(fp)
+    return None
 
 
 # 实例属性和类属性
@@ -92,12 +92,12 @@ def readImage(fp):
 # 给实例绑定属性的方法是通过实例变量，或者通过self变量：
 
 class Student(object):
-	def __init__(self, name):
-		self.name = name
+    def __init__(self, name):
+        self.name = name
 
 
 class Student(object):
-	name = 'Student'
+    name = 'Student'
 
 
 s = Student()

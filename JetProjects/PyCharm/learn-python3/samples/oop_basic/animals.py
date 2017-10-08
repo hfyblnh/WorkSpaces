@@ -10,18 +10,18 @@ __author__ = 'Arteezy'
 # 在OOP程序设计中，当我们定义一个class的时候，可以从某个现有的class继承，新的class称为子类（Subclass），而被继承的class称为基类、父类或超类（Base class、Super class）。
 
 class Animal(object):
-	def run(self):
-		print('Animal is running...')
+    def run(self):
+        print('Animal is running...')
 
 
 class Dog(Animal):
-	def run(self):
-		print('Dog is running...')
+    def run(self):
+        print('Dog is running...')
 
 
 class Cat(Animal):
-	def run(self):
-		print('Cat is running...')
+    def run(self):
+        print('Cat is running...')
 
 
 dog = Dog()
@@ -40,8 +40,8 @@ print(isinstance(Animal(), Cat))
 
 
 def run_twice(animal):
-	animal.run()
-	animal.run()
+    animal.run()
+    animal.run()
 
 
 # 与C++一致，形参为指向基类的指针或者引用，实参为子类对象（实例）
@@ -51,8 +51,8 @@ run_twice(Dog())
 
 
 class Tortoise(Animal):
-	def run(self):
-		print('Tortoise is running slowly...')
+    def run(self):
+        print('Tortoise is running slowly...')
 
 
 run_twice(Tortoise())
@@ -78,8 +78,8 @@ run_twice(Tortoise())
 
 
 class Timer(object):
-	def run(self):
-		print('Start...')
+    def run(self):
+        print('Start...')
 
 
 '''

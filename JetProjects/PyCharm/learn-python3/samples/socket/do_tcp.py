@@ -15,12 +15,12 @@ s.send(b'GET / HTTP/1.1\r\nHost: www.sina.com.cn\r\nConnection: close\r\n\r\n')
 # 接收数据:
 buffer = []
 while True:
-	# 每次最多接收1K字节:
-	d = s.recv(1024)
-	if d:
-		buffer.append(d)
-	else:
-		break
+    # 每次最多接收1K字节:
+    d = s.recv(1024)
+    if d:
+        buffer.append(d)
+    else:
+        break
 
 data = b''.join(buffer)
 
@@ -34,5 +34,4 @@ print(header.decode('utf-8'))
 
 # 把接收的数据写入文件:
 with open('sina.html', 'wb') as f:
-	f.write(html)
-
+    f.write(html)

@@ -17,7 +17,7 @@ print(int('12345', 16))
 
 # 假设要转换大量的二进制字符串，每次都传入int(x, base=2)非常麻烦，于是，我们想到，可以定义一个int2()的函数，默认把base=2传进去：
 def int2(x, base=2):
-	return int(x, base)
+    return int(x, base)
 
 
 print(int2('1001010'))

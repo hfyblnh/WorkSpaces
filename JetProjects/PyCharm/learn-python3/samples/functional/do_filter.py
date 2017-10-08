@@ -12,14 +12,14 @@
 
 
 def is_odd(n):
-	return n % 2 == 1
+    return n % 2 == 1
 
 
 print(list(filter(is_odd, range(1, 11))))
 
 
 def not_empty(s):
-	return s and s.strip()
+    return s and s.strip()
 
 
 print(list(filter(not_empty, ['abc', '', 'xyz', '', None, ''])))

@@ -9,7 +9,7 @@ import functools
 
 
 def now1():
-	print("2017/9/30 20:22")
+    print("2017/9/30 20:22")
 
 
 f1 = now1
@@ -24,17 +24,17 @@ print(f1.__name__)
 
 
 def log(func):
-	def wrapper(*args, **kw):
-		print('call %s():' % func.__name__)
-		return func(*args, **kw)
+    def wrapper(*args, **kw):
+        print('call %s():' % func.__name__)
+        return func(*args, **kw)
 
-	return wrapper
+    return wrapper
 
 
 # 观察上面的log，因为它是一个decorator，所以接受一个函数作为参数，并返回一个函数。我们要借助Python的@语法，把decorator置于函数的定义处：
 @log
 def now2():
-	print("2017/9/30 20:22")
+    print("2017/9/30 20:22")
 
 
 f2 = now2
@@ -53,19 +53,19 @@ wrapper()函数的参数定义是(*args, **kw)，因此，wrapper()函数可以�
 
 # 如果decorator本身需要传入参数，那就需要编写一个返回decorator的高阶函数，写出来会更复杂。比如，要自定义log的文本：
 def log2(text):
-	def decorator(func):
-		def wrapper(*args, **kw):
-			print('%s %s():' % (text, func.__name__))
-			return func(*args, **kw)
+    def decorator(func):
+        def wrapper(*args, **kw):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kw)
 
-		return wrapper
+        return wrapper
 
-	return decorator
+    return decorator
 
 
 @log2('execute')
 def now3():
-	print("2017/9/30 20:22")
+    print("2017/9/30 20:22")
 
 
 f3 = now3
@@ -81,56 +81,56 @@ print(f3.__name__)
 
 
 def log3(func):
-	@functools.wraps(func)
-	def wrapper(*args, **kw):
-		print('call %s():' % func.__name__)
-		return func(*args, **kw)
+    @functools.wraps(func)
+    def wrapper(*args, **kw):
+        print('call %s():' % func.__name__)
+        return func(*args, **kw)
 
-	return wrapper
+    return wrapper
 
 
 def log4(text):
-	def decorator(func):
-		@functools.wraps(func)
-		def wrapper(*args, **kw):
-			print('%s %s():' % (text, func.__name__))
-			return func(*args, **kw)
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kw)
 
-		return wrapper
+        return wrapper
 
-	return decorator
+    return decorator
 
 
 # 作业
 def call_log(*args1, **kw1):
-	if len(args1) == 1 and len(kw1) == 0 and callable(args1[0]):  # 以 @log 处理
-		@functools.wraps(args1[0])
-		def wrapper1(*args, **kw):
-			print('call %s():' % args1[0].__name__)
-			return args1[0](*args, **kw)
+    if len(args1) == 1 and len(kw1) == 0 and callable(args1[0]):  # 以 @log 处理
+        @functools.wraps(args1[0])
+        def wrapper1(*args, **kw):
+            print('call %s():' % args1[0].__name__)
+            return args1[0](*args, **kw)
 
-		return wrapper1
-	else:  # 以 @log(*args, **kwargs) 处理，用args[0]取输入字符串
-		def decorator(func):
-			@functools.wraps(func)
-			def wrapper2(*args, **kw):
-				print('%s begin call' % args1[0])
-				func(*args, **kw)
-				print('%s end call' % args1[0])
+        return wrapper1
+    else:  # 以 @log(*args, **kwargs) 处理，用args[0]取输入字符串
+        def decorator(func):
+            @functools.wraps(func)
+            def wrapper2(*args, **kw):
+                print('%s begin call' % args1[0])
+                func(*args, **kw)
+                print('%s end call' % args1[0])
 
-			return wrapper2
+            return wrapper2
 
-		return decorator
+        return decorator
 
 
 @call_log('Arteezy')
 def ftest1():
-	print("2ez4rtz")
+    print("2ez4rtz")
 
 
 @call_log
 def ftest2():
-	print('Life is a river.')
+    print('Life is a river.')
 
 
 print("作业：")

@@ -5,23 +5,23 @@ from collections import Iterator
 
 d = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 for k in d:
-	print(k)
+    print(k)
 
 for v in d.values():
-	print(v)
+    print(v)
 
 for k, v in d.items():
-	print(k, v)
+    print(k, v)
 
 for ch in "2ez4rtz":
-	print(ch)
+    print(ch)
 
 print(isinstance('abc', Iterable))
 print(isinstance(1234, Iterable))
 print(isinstance([1, 2, 3, 4], Iterable))
 
 for i, value in enumerate(['A', 'B', 'C']):
-	print(i, value)
+    print(i, value)
 
 it = iter([1, 2, 3, 4, 5])
 print(next(it))
@@ -60,7 +60,7 @@ print(isinstance(iter(()), Iterator))
 # Python的for循环本质上就是通过不断调用next()函数实现的，例如：
 
 for x in [1, 2, 3, 4, 5]:
-	print(x)
+    print(x)
 
 # 实际上完全等价于：
 
@@ -68,10 +68,10 @@ for x in [1, 2, 3, 4, 5]:
 it = iter([1, 2, 3, 4, 5])
 # 循环:
 while True:
-	try:
-		# 获得下一个值:
-		x = next(it)
-		print(x)
-	except StopIteration:
-		# 遇到StopIteration就退出循环
-		break
+    try:
+        # 获得下一个值:
+        x = next(it)
+        print(x)
+    except StopIteration:
+        # 遇到StopIteration就退出循环
+        break
