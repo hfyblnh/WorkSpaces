@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
@@ -6,7 +7,7 @@ import random
 
 
 def testing_random():
-    ''' testing the module random'''
+    """ testing the module random """
     values = [1, 2, 3, 4]
     print(random.choice(values))
     print(random.choice(values))
@@ -15,7 +16,7 @@ def testing_random():
     print(random.sample(values, 3))
 
     ''' shuffle in place '''
-    random.shuffle(values)
+    random.shuffle(values)  # 洗牌
     print(values)
 
     ''' create random integers '''

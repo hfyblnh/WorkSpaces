@@ -1,16 +1,17 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
-''' convert an integer to a string in any base'''
+''' convert an integer to a string in any base '''
 
 
 def convert_from_dec_to_any_base(number, base):
-    '''
+    """
     >>> number, base = 9, 2
     >>> convert_from_dec_to_any_base(number, base)
     '1001'
-    '''
+    """
 
     convertString = '012345679ABCDEF'
 
@@ -23,11 +24,11 @@ def convert_from_dec_to_any_base(number, base):
 
 
 def convert_from_decimal_to_binary(number, base):
-    '''
+    """
     >>> number, base = 9, 2
     >>> convert_from_decimal_to_binary(number, base)
     1001
-    '''
+    """
 
     multiplier, result = 1, 0
 
@@ -40,11 +41,11 @@ def convert_from_decimal_to_binary(number, base):
 
 
 def convert_from_decimal_larger_bases(number, base):
-    '''
+    """
     >>> number, base = 31, 16
     >>> convert_from_decimal_larger_bases(number, base)
     '1F'
-    '''
+    """
     strings = "0123456789ABCDEFGHIJ"
     result = ""
 

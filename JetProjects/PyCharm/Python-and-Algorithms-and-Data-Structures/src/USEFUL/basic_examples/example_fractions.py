@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import division
 
 __author__ = "bt3"
 
@@ -27,9 +29,10 @@ def test_testing_floats(module_name='this module'):
     number1 = 1.25
     number2 = 1
     number3 = -1
-    number4 = 5 / 4
+    number4 = 5 / 4  # 精确除法 from __future__ import division
     number6 = 6
-    assert (rounding_floats(number1, number2) == 1.2)
+    # assert (rounding_floats(number1, number2) == 1.2)
+    assert (rounding_floats(number1, number2) == 1.3)  # 四舍五入
     assert (rounding_floats(number1 * 10, number3) == 10)
     assert (float_to_fractions(number1) == number4)
     assert (get_denominator(number2, number6) == number6)

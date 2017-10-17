@@ -1,4 +1,5 @@
 # !/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
@@ -7,7 +8,7 @@ import numpy as np
 
 
 def testing_numpy():
-    ''' tests many features of numpy '''
+    # tests many features of numpy
     ax = np.array([1, 2, 3])
     ay = np.array([3, 4, 5])
     print(ax)
@@ -19,6 +20,7 @@ def testing_numpy():
     print(np.where(ax < 2, ax, 10))
 
     m = np.matrix([ax, ay, ax])
+    print('-----matrix([ax, ay, ax]-----')
     print(m)
     print(m.T)
 
