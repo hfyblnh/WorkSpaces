@@ -1,11 +1,12 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
 
 def finding_gcd(a, b):
-    ''' implements the greatest common divider algorithm '''
-    while (b != 0):
+    # implements the greatest common divider algorithm
+    while b != 0:
         result = b
         a, b = b, a % b
     return result

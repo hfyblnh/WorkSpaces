@@ -1,12 +1,14 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
 from collections import defaultdict
 
 
+# 是否回文
 def is_palindrome(array):
-    '''
+    """
     >>> is_palindrome('subi no onibus')
     True
     >>> is_palindrome('helllo there')
@@ -15,7 +17,7 @@ def is_palindrome(array):
     True
     >>> is_palindrome('')
     True
-    '''
+    """
     array = array.strip(' ')
     if len(array) < 2:
         return True
