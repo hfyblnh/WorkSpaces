@@ -31,7 +31,7 @@ def write_data(lines, filename):
             fh.write(line)
     except (EnvironmentError) as err:
         print(err)
-        finally:
+    finally:
         if fh is not None:
             fh.close()
 

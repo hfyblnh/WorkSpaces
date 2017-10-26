@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
@@ -6,9 +7,11 @@ from collections import OrderedDict
 
 
 def OrderedDict_example():
-    ''' show some examples for OrderedDict '''
-    ''' keep the order of insertion.
-        maintains a doubly linked list, so size is more than twice than normal dict'''
+    # show some examples for OrderedDict
+    """
+    keep the order of insertion.
+    maintains a doubly linked list, so size is more than twice than normal dict
+    """
 
     pairs = [('a', 1), ('b', 2), ('c', 3)]
 

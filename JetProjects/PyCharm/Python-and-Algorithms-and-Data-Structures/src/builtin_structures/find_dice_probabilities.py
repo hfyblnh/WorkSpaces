@@ -1,11 +1,9 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
-'''
-given 2 dice, determine number of ways to sum S if all dice are rolled
-'''
-
+# given 2 dice, determine number of ways to sum S if all dice are rolled
 from collections import Counter, defaultdict
 
 

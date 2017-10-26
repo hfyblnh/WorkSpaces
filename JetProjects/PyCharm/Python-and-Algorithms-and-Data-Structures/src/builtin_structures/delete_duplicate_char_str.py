@@ -1,19 +1,19 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
-'''  find and delete all the duplicate characters in a string '''
-
+# find and delete all the duplicate characters in a string
 from collections import Counter
 
 
 def delete_unique(str1):
-    '''
+    """
     >>> delete_unique("Trust no one")
     'on'
     >>> delete_unique("Mulder?")
     ''
-    '''
+    """
 
     str_strip = ''.join(str1.split())
     repeat = Counter()
@@ -30,12 +30,12 @@ def delete_unique(str1):
 
 
 def removing_duplicates_seq(str1):
-    '''
+    """
     >>> delete_unique("Trust no one")
     'on'
     >>> delete_unique("Mulder?")
     ''
-    '''
+    """
     seq = str1.split()
     result = set()
     for item in seq:
