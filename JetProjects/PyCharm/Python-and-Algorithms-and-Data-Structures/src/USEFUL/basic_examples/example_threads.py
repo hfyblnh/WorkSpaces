@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
@@ -6,9 +7,8 @@ import threading
 
 
 def worker(num):
-    """thread worker function"""
-    print
-    'Worker: %s' % num
+    # thread worker function
+    print('Worker: %s' % num)
     return
 
 
