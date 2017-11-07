@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 # mari von steinkirch @2013
 # steinkirch at gmail
 
@@ -21,12 +22,13 @@ class Point(object):
         return "point ({0.x!r}, {0.y!r})".format(self)
 
     def __str__(self):  # cannot be passed to eval
-        return "({0.x!r}, {0.y!r})".format(self)
+        # return "({0.x!r}, {0.y!r})".format(self)
+        return repr(self)
 
 
 class Circle(Point):
     def __init__(self, radius, x=0, y=0):
-        super().__init__(x, y)  # creates and initializes self.x and self.y
+        super(Circle, self).__init__(x, y)  # creates and initializes self.x and self.y
         self.radius = radius
 
     def edge_distance_from_origin(self):
@@ -39,7 +41,7 @@ class Circle(Point):
         return 2 * math.pi * self.radius
 
     def __eq__(self, other):  # let us avoid infinite recursion
-        return self.radius == other.radius and super().__eq__(other)
+        return self.radius == other.radius and super.__eq__(other)
 
     def __repr__(self):
         return "circle ({0.radius!r}, {0.x!r})".format(self)
@@ -50,6 +52,7 @@ class Circle(Point):
 
 if __name__ == '__main__':
     a = Point(3, 4)
+    print(a)
     print(a.distance_from_origin())
     c = Circle(3, 2, 1)
     print(c)

@@ -1,16 +1,18 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
 import random
 
 
+# 基准，标准检查程序
 def benchmark(func):
     import time
     def wrapper(*args, **kwargs):
         t = time.clock()
         res = func(*args, **kwargs)
-        print("\t%s" % func.__name__, time.clock() - t)
+        print("%s" % func.__name__, time.clock() - t)
         return res
 
     return wrapper

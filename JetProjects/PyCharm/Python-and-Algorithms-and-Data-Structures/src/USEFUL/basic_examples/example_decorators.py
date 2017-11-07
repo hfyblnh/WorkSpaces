@@ -1,12 +1,12 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
 
 def logger(func):
-    def inner(*args):  # 1
-        print
-        "Arguments were: {0}".format(args)
+    def inner(*args):
+        print("Arguments were: {0}".format(args))
         return func(*args)
 
     return inner
@@ -17,8 +17,8 @@ def foo(x, y):
     return x + y
 
 
-print
-foo(1, 2)
+print(foo(1, 2))
+print(foo(3, 4))
 
 
 def sum(func):
@@ -36,8 +36,7 @@ def interate():
     return a
 
 
-print
-interate
+print(interate)
 
 
 # which is the same as
@@ -48,5 +47,4 @@ def interate():
     return a
 
 
-print
-sum(interate)
+print(sum(interate))
