@@ -1,7 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
+import os
+import sys
 import pickle
 
 
@@ -12,10 +15,9 @@ def import_pickle(filename):
         mydict2 = pickle.load(fh)
         return mydict2
 
-    except (EnvironmentError) as err:
+    except EnvironmentError as err:
         print("{0}: import error: {0}".format(os.path.basename(sys.arg[0]), err))
-        return false
-
+        return False
     finally:
         if fh is not None:
             fh.close()

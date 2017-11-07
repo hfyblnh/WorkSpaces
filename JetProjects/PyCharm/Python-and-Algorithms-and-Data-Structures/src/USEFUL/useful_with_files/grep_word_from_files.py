@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
@@ -7,7 +7,7 @@ import sys
 
 
 def grep_word_from_files():
-    ''' using iterator enumerate to create a grep command '''
+    # using iterator enumerate to create a grep command
     word = sys.argv[1]
     for filename in sys.argv[2:]:
         with open(filename) as file:
