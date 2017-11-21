@@ -1,14 +1,14 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
-''' Queue acts as a container for nodes (objects) that are inserted and removed according FIFO'''
+''' Queue acts as a container for nodes (objects) that are inserted and removed according FIFO '''
 
 
 class Node(object):
     def __init__(self, value=None, pointer=None):
         self.value = value
-        self.pointer = None
+        self.pointer = pointer
 
 
 class LinkedQueue(object):
@@ -48,7 +48,7 @@ class LinkedQueue(object):
     def peek(self):
         return self.head.value
 
-    def _print(self):
+    def printQueue(self):
         node = self.head
         while node:
             print(node.value)
@@ -62,10 +62,11 @@ if __name__ == '__main__':
     for i in range(10):
         queue.enqueue(i)
     print("Is the queue empty? ", queue.isEmpty())
-    queue._print()
+    queue.printQueue()
 
     print("Queue size: ", queue.size())
     print("Queue peek : ", queue.peek())
     print("Dequeue...", queue.dequeue())
+    print("Dequeue...", queue.dequeue())
     print("Queue peek: ", queue.peek())
-    queue._print()
+    queue.printQueue()

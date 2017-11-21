@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
 
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     for i in range(10):
         queue.enqueue(i)
     print("Queue size: ", queue.size())
-    print("Queue peek : ", queue.peek())
+    print("Queue peek: ", queue.peek())
     print("Dequeue...", queue.dequeue())
     print("Queue peek: ", queue.peek())
     print("Is the queue empty? ", queue.isEmpty())

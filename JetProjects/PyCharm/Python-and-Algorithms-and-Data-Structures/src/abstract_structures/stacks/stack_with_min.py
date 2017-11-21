@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
 ''' A stack with a minimum lookup '''
@@ -15,22 +15,22 @@ class NodeWithMin(object):
 
 class StackMin(Stack):
     def __init__(self):
-        self.items = []
+        self.content = []
         self.minimum = None
 
     def push(self, value):
         if self.isEmpty() or self.minimum > value:
             self.minimum = value
-        self.items.append(NodeWithMin(value, self.minimum))
+        self.content.append(NodeWithMin(value, self.minimum))
 
     def peek(self):
-        return self.items[-1].value
+        return self.content[-1].value
 
     def peekMinimum(self):
-        return self.items[-1].minimum
+        return self.content[-1].minimum
 
     def pop(self):
-        item = self.items.pop()
+        item = self.content.pop()
         if item:
             if item.value == self.minimum:
                 self.minimum = self.peekMinimum()
@@ -40,7 +40,7 @@ class StackMin(Stack):
 
     def __repr__(self):
         aux = []
-        for i in self.items:
+        for i in self.content:
             aux.append(i.value)
         return '{}'.format(aux)
 

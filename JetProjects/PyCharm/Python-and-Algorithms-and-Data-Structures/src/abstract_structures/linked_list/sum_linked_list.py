@@ -1,18 +1,18 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
-''' Supposing two linked lists representing numbers, such that in each of their
-    nodes they carry one digit. This function sums the two numbers that these
-    two linked lists represent, returning a third list representing the sum:'''
+'''
+Supposing two linked lists representing numbers, such that in each of their nodes they carry one digit.
+This function sums the two numbers that these two linked lists represent, returning a third list representing the sum.
+'''
 
 from linked_list_fifo import LinkedListFIFO
-from node import Node
 
 
 class LinkedListFIFOYield(LinkedListFIFO):
     # print each node's value, starting from the head
-    def _printList(self):
+    def printList(self):
         node = self.head
         while node:
             yield (node.value)
@@ -23,7 +23,7 @@ def sumlls(l1, l2):
     lsum = LinkedListFIFOYield()
     dig1 = l1.head
     dig2 = l2.head
-    pointer = 0
+    pointer = 0  # 进位
 
     while dig1 and dig2:
         d1 = dig1.value
@@ -32,39 +32,41 @@ def sumlls(l1, l2):
         if sum_d > 9:
             pointer = sum_d // 10
             lsum.addNode(sum_d % 10)
-
         else:
             lsum.addNode(sum_d)
             pointer = 0
-
         dig1 = dig1.pointer
         dig2 = dig2.pointer
 
-    if dig1:
+    while dig1:
         sum_d = pointer + dig1.value
         if sum_d > 9:
             lsum.addNode(sum_d % 10)
         else:
             lsum.addNode(sum_d)
+            pointer = 0
         dig1 = dig1.pointer
 
-    if dig2:
+    while dig2:
         sum_d = pointer + dig2.value
         if sum_d > 9:
             lsum.addNode(sum_d % 10)
         else:
             lsum.addNode(sum_d)
+            pointer = 0
         dig2 = dig2.pointer
 
     return lsum
 
 
 if __name__ == '__main__':
-    l1 = LinkedListFIFOYield()  # 2671
+    l1 = LinkedListFIFOYield()  # 112671
     l1.addNode(1)
     l1.addNode(7)
     l1.addNode(6)
     l1.addNode(2)
+    l1.addNode(1)
+    l1.addNode(1)
 
     l2 = LinkedListFIFOYield()  # 455
     l2.addNode(5)
@@ -72,7 +74,6 @@ if __name__ == '__main__':
     l2.addNode(4)
 
     lsum = sumlls(l1, l2)
-    l = list(lsum._printList())
+    l = list(lsum.printList())
     for i in reversed(l):
-        print
-        i
+        print(i)

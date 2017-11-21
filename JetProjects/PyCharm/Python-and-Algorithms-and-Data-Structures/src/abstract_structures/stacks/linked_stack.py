@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
-""" A stack made of linked list"""
+""" A stack made of linked list """
 
 
 class Node(object):
@@ -43,7 +43,7 @@ class Stack(object):
             node = node.pointer
         return count
 
-    def _printList(self):
+    def printList(self):
         node = self.head
         while node:
             print(node.value)
@@ -56,10 +56,10 @@ if __name__ == '__main__':
     print("Adding 0 to 10 in the stack...")
     for i in range(10):
         stack.push(i)
-    stack._printList()
+    stack.printList()
     print("Stack size: ", stack.size())
     print("Stack peek : ", stack.peek())
     print("Pop...", stack.pop())
     print("Stack peek: ", stack.peek())
     print("Is the stack empty? ", stack.isEmpty())
-    stack._printList()
+    stack.printList()

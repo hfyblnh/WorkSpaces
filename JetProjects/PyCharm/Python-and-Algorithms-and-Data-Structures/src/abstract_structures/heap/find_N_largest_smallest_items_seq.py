@@ -1,40 +1,40 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
 import heapq
 
 
 def find_N_largest_items_seq(seq, N):
-    ''' find the N largest items in a sequence '''
+    """ find the N largest items in a sequence """
     return heapq.nlargest(N, seq)
 
 
 def find_N_smallest_items_seq(seq, N):
-    ''' find the N smallest items in a sequence '''
+    """ find the N smallest items in a sequence """
     return heapq.nsmallest(N, seq)
 
 
 def find_smallest_items_seq_heap(seq):
-    ''' find the smallest items in a sequence using heapify first'''
-    ''' heap[0] is always the smallest item '''
-    ''' pops the smallest item, O(logN) '''
+    """ find the smallest items in a sequence using heapify first
+        heap[0] is always the smallest item
+        pops the smallest item, O(logN) """
     heapq.heapify(seq)
     return heapq.heappop(seq)
 
 
 def find_smallest_items_seq(seq):
-    '''  if it is only one item, min() is faster '''
+    """ if it is only one item, min() is faster """
     return min(seq)
 
 
 def find_N_smallest_items_seq_sorted(seq, N):
-    '''  N ~ len(seq), better sort instead'''
+    """ N ~ len(seq), better sort instead """
     return sorted(seq)[:N]
 
 
 def find_N_largest_items_seq_sorted(seq, N):
-    '''  N ~ len(seq), better sort instead'''
+    """ N ~ len(seq), better sort instead """
     return sorted(seq)[len(seq) - N:]
 
 

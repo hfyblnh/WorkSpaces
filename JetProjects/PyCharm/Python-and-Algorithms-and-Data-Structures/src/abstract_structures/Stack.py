@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = "bt3"
 
@@ -24,7 +25,7 @@ class Stack(object):
                 self.min = self.min_array[-1]
             return value
         else:
-            return 'Empty List. '
+            return 'Empty List.'
 
     def find_min(self):
         if self.min_array:
@@ -56,6 +57,7 @@ if __name__ == '__main__':
     for i in range(10, 5, -1):
         q.push(i)
 
+    print(q)
+
     for i in range(1, 13):
-        print
-        q.pop(), q.find_min()
+        print(q.pop(), q.find_min())

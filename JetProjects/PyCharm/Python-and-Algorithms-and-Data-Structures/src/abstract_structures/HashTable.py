@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
 
@@ -21,9 +21,8 @@ class HashTable(object):
         self.table[key].append(value)
 
     def print_table(self):
-        for key in range(len(self.table)):
-            print
-            "Key is %s, value is %s." % (key, self.table[key])
+        for key in range(self.slots):
+            print("Key is %s, value is %s." % (key, self.table[key]))
 
     def find_item(self, item):
         pos = self.hash_key(item)

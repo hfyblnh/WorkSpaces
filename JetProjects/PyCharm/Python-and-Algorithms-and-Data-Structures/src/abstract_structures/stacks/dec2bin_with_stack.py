@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
-'''transform a decimal number to a binary number with a stack '''
+'''transform a decimal number to a binary number with a stack'''
 
 from stack import Stack
 
@@ -12,8 +12,8 @@ def dec2bin_with_stack(decnum):
     str_aux = ''
 
     while decnum > 0:
-        dig = decnum % 2
-        decnum = decnum // 2
+        dig = decnum % 2  # 余数
+        decnum = decnum // 2  # 商
         s.push(dig)
 
     while not s.isEmpty():

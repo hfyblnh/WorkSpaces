@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
+
+import math
 
 
 class Heapify(object):
@@ -12,21 +14,24 @@ class Heapify(object):
     def __repr__(self):
         return '{}'.format(self.data)
 
-    def parent(self, i):
-        return i >> 1
+    @staticmethod
+    def parent(i):
+        # return i >> 1  # 此处错误
+        return math.ceil(i / 2) - 1
 
-    def left_child(self, i):
+    @staticmethod
+    def left_child(i):
         return (i << 1) + 1
 
-    def right_child(self, i):
+    @staticmethod
+    def right_child(i):
         return (i << 1) + 2  # +2 instead of +1 because it's 0-indexed.
 
     def __max_heapify__(self, i):
-        largest = i
-        left = self.left_child(i)
-        right = self.right_child(i)
+        left = self.left_child(i)  # 左子index
+        right = self.right_child(i)  # 右子index
         n = len(self.data)
-        largest = (left < n and self.data[left] > self.data[i]) and left or i
+        largest = (left < n and self.data[left] > self.data[i]) and left or i  # 获取最大值的下标
         largest = (right < n and self.data[right] > self.data[largest]) and right or largest
         if i is not largest:
             self.data[i], self.data[largest] = self.data[largest], self.data[i]
@@ -42,8 +47,9 @@ class Heapify(object):
 
 
 def test_Heapify():
-    l1 = [3, 2, 5, 1, 7, 8, 2]
-    h = Heapify(l1)
+    l = [3, 2, 5, 1, 7, 8, 2]
+    h = Heapify(l)
+    print(h)
     assert (h.extract_max() == 8)
 
 

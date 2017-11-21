@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
 """ Using our deque class and Python's deque class """
@@ -12,14 +12,15 @@ from deque import Deque
 STRIP = string.whitespace + string.punctuation + "\"'"
 
 
+# 回文判断
 def palindrome_checker_with_deque(str1):
     d1 = Deque()
     d2 = collections.deque()
 
     for s in str1.lower():
         if s not in STRIP:
-            d2.append(s)
             d1.enqueue(s)
+            d2.append(s)
 
     eq1 = True
     while d1.size() > 1 and eq1:

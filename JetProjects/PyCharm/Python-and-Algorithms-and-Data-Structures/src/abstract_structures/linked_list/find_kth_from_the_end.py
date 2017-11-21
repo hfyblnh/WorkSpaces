@@ -1,14 +1,15 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 __author__ = "bt3"
 
-''' Find the mth-to-last element of a linked list.
-    One option is having two pointers, separated by m. P1 start at the roots
-    (p1 = self.root) and p2 is m-behinf pointer, which is created when p1 is at m.
-    When p1 reach the end, p2 is the node. '''
+'''
+Find the mth-to-last element of a linked list.
+One option is having two pointers, separated by m. P1 start at the head 
+(p1 = self.head) and p2 is m-behind pointer, which is created when p1 is at m.
+When p1 reach the end, p2 is the node.
+'''
 
 from linked_list_fifo import LinkedListFIFO
-from node import Node
 
 
 class LinkedListFIFO_find_kth(LinkedListFIFO):
@@ -31,7 +32,7 @@ if __name__ == '__main__':
     for i in range(1, 11):
         ll.addNode(i)
     print('The Linked List:')
-    print(ll._printList())
+    print(ll.printList())
     k = 3
     k_from_last = ll.find_kth_to_last(k)
     print("The %dth element to the last of the LL of size %d is %d" % (k, ll.length, k_from_last))
